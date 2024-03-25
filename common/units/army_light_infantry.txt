@@ -1,0 +1,28 @@
+﻿light_infantry = {
+	default = yes
+	army = yes
+	assault = yes
+	is_flank = no
+	levy_tier = basic
+	maneuver = 1
+	movement_speed = 2.5
+	morale_damage_taken = 0.9
+	heavy_cavalry = 1.25
+	light_cavalry = 2
+	warelephant = 1.25
+	horse_archers = 1.25
+	light_infantry = 1
+	heavy_infantry = 1
+	archers = 1
+	camels = 1
+	supply_train = 2
+	attrition_loss = 0.05
+	attrition_weight = 1
+	food_consumption = 0.2
+	food_storage = 4
+	build_cost = {
+		gold = 20
+		manpower = 1
+	}
+	build_time = 30
+}

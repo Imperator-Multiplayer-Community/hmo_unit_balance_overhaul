@@ -1,0 +1,36 @@
+﻿warelephant = {
+	army = yes
+	is_flank = no
+	levy_tier = advanced
+	allow = {
+		trade_good_surplus = {
+			target = elephants
+			value > 0
+		}
+	}
+	maneuver = 0
+	movement_speed = 2.5
+	strength_damage_taken = 0.75
+	morale_damage_taken = 1
+	morale_damage_done = 2
+	light_infantry = 1.2
+	heavy_infantry = 1.25
+	heavy_cavalry = 1.2
+	horse_archers = 0.5
+	warelephant = 1
+	archers = 1
+	light_cavalry = 1
+	camels = 1
+	supply_train = 2
+	setup_fraction = 0.1
+	ai_max_percentage = 15
+	build_cost = {
+		gold = 45
+		manpower = 1
+	}
+	build_time = 365
+	attrition_loss = 0.1
+	attrition_weight = 3
+	food_consumption = 0.3
+	food_storage = 4
+}

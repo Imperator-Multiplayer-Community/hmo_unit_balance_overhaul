@@ -1,0 +1,33 @@
+﻿horse_archers = {
+	army = yes
+	is_flank = yes
+	levy_tier = basic
+	allow = {
+		trade_good_surplus = {
+			target = steppe_horses
+			value > 0
+		}
+	}
+	maneuver = 14
+	movement_speed = 4
+	morale_damage_taken = 1.15
+	strength_damage_taken = 0.75
+	light_infantry = 1
+	heavy_infantry = 1
+	heavy_cavalry = 1
+	warelephant = 1.25
+	horse_archers = 1
+	archers = 1
+	light_cavalry = 1
+	camels = 1
+	supply_train = 2
+	build_cost = {
+		gold = 30		# with the right trads will reduce this alot
+		manpower = 1
+	}
+	build_time = 60
+	attrition_weight = 1
+	attrition_loss = 0.05
+	food_consumption = 0.15
+	food_storage = 3
+}
