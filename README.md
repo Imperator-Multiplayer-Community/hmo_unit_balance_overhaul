@@ -7,7 +7,7 @@ HI: Are now considered swordsmen. They counter spearmen. Take less morale damage
 
 LI: Are now considered spearmen. They counter cavalry. Take less morale damage.
 
-HC: Center formation horsemen. They count swordsmen. Take less morale damage and deal more morale damage.
+HC: Center formation horsemen. They counter swordsmen. Take less morale damage and deal more morale damage.
 
 ## Flank units:
 LC: Do a lot of damage but will retreat quickly. If they win the flanks they will decimate the enemy center.
