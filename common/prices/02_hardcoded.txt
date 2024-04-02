@@ -1,0 +1,19 @@
+﻿buy_military_tradition = {
+	military_experience = 0
+}
+
+buy_military_tradition_t1 = {
+	military_experience = 60
+}
+
+buy_military_tradition_t2 = {
+	military_experience = 100
+}
+
+buy_military_tradition_t3 = {
+	military_experience = 140
+}
+
+buy_military_tradition_t4 = {
+	military_experience = 180
+}

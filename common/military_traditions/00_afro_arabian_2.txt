@@ -1,0 +1,87 @@
+﻿afro_arabian_philosophy_2 = {
+	#Ethiopian Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
+	image = levantine_arabian_path_2
+	allow = {
+		trigger_if = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = afro_arabian_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_afro_arabian"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:meroitic_group
+						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
+					}
+				}
+			}
+		}
+	}
+	afro_arabian_integrated_path_1 = {
+		allow = {
+			can_pay = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+			# TODO: unlock formation
+		}
+		modifier = {
+			army_maintenance_cost = 0.02
+		}
+		icon = levantine_arabian_path_end_bonus
+		requires = {
+		}
+	}
+	afro_arabian_integrated_path_1_2 = {
+		allow = {
+			can_pay = buy_military_tradition_t4
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t4
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					culture = aksumite
+					add_trait = aggressive
+				}
+			}
+		}
+		modifier = {
+			light_infantry_discipline = 0.025
+			warelephant_discipline = 0.025
+			camels_discipline = 0.025
+			army_maintenance_cost = 0.02
+		}
+		icon = levantine_arabian_path_end_bonus
+		requires = {
+			afro_arabian_integrated_path_1
+		}
+	}
+	afro_arabian_integrated_path_2_1 = {
+		allow = {
+			can_pay = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		enable_ability = naval_raiding
+		modifier = {
+			trireme_offensive = 0.05
+			enslavement_efficiency = 0.1
+			navy_maintenance_cost = 0.02
+		}
+		icon = levantine_egyptian_path_2
+		requires = {
+		}
+	}
+}
