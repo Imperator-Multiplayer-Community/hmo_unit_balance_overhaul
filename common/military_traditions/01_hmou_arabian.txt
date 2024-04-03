@@ -1,0 +1,621 @@
+# Ethiopian Path
+arabian_philosophy = {
+	color = {
+		1.72
+		0.64
+		0.7
+	}
+	image = levantine_arabian_path_end_bonus
+	allow = {
+		trigger_if = {
+			limit = {
+				country_culture_group = south_levantine
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = south_levantine
+		}
+		trigger_else = {
+			OR = {
+				country_culture_group = south_levantine
+			}
+		}
+	}
+	arabian_unit_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			camels_cost = -0.05
+			camels_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	arabian_unit_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		icon = x
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			arabian_unit_path_4
+		}
+	}
+	arabian_unit_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		icon = x
+		modifier = {
+			camels_offensive = 0.1
+			camels_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			arabian_unit_path_1_2
+		}
+	}
+	arabian_unit_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_5
+	}
+	arabian_unit_path_2_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		modifier = {
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_germanic_path_7
+		requires = {
+			arabian_unit_path_4
+		}
+	}
+	arabian_unit_path_2_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		modifier = {
+			light_infantry_offensive = 0.1
+			light_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+			arabian_unit_path_2_2
+		}
+	}
+	arabian_unit_path_3_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		icon = x
+		modifier = {
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+	}
+	arabian_unit_path_3_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		icon = x
+		modifier = {
+			archers_defensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			arabian_unit_path_4
+		}
+	}
+	arabian_unit_path_3_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		icon = x
+		modifier = {
+			archers_offensive = 0.1
+			archers_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			arabian_unit_path_3_2
+		}
+	}
+	arabian_unit_path_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = tactician
+				}
+			}
+			# TODO: Add Afro-Arabian Formation
+		}
+		modifier = {
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			arabian_unit_path_1_1
+			arabian_unit_path_2_1
+			arabian_unit_path_3_1
+		}
+	}
+	afro_arabian_infa_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			price_found_city_cost_modifier = -0.075
+			local_forum_building_cost = -0.1
+		}
+		on_activate = {
+			add_3_free_province_investments = yes
+		}
+		icon = levantine_egyptian_path_4
+		requires = {
+		}
+	}
+	afro_arabian_infa_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_food_capacity = 200
+		}
+		icon = levantine_egyptian_path_7
+		requires = {
+			afro_arabian_infa_path_1_1
+		}
+	}
+	afro_arabian_infa_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			ship_cost = -0.15
+			global_state_trade_routes = 0.05
+		}
+		on_activate = {
+			ordered_owned_province = {
+				#Upgrades a port, or creates one
+				limit = {
+					owner = {
+						num_of_ports < 1
+					}
+					is_coastal = yes
+					NOT = {
+						has_building = port_building
+					}
+					can_build_building = port_building
+				}
+				alternative_limit = {
+					is_coastal = yes
+					has_building = port_building
+					can_build_building = port_building
+				}
+				alternative_limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				order_by = total_population
+				add_building_level = port_building
+				add_building_level = port_building
+			}
+		}
+		icon = latin_tribal_path_6
+		requires = {
+		}
+	}
+	afro_arabian_infa_path_2_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_commerce_modifier = 0.05
+			country_civilization_value = 5
+		}
+		icon = north_african_army_path_4
+		requires = {
+			afro_arabian_infa_path_2_1
+		}
+		on_activate = {
+			add_innovation = 3
+		}
+	}
+	afro_arabian_infa_path_final = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_monthly_food_modifier = 0.15
+			global_population_capacity_modifier = 0.1
+		}
+		icon = north_african_army_path_1
+		requires = {
+			afro_arabian_infa_path_1_2
+			afro_arabian_infa_path_2_2
+		}
+	}
+	afro_arabian_fort_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_defensive = 0.075
+			fort_limit = 1
+			garrison_size = 0.1
+			hostile_attrition = 1
+			fort_maintenance_cost = 0.01
+		}
+		icon = north_african_naval_path_6
+		requires = {
+		}
+	}
+	afro_arabian_fort_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			army_weight_modifier = -0.15
+			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = north_african_tribal_path_end_bonus
+		requires = {
+			afro_arabian_fort_path_1_1
+		}
+	}
+	afro_arabian_fort_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			assault_ability = 0.05
+			siege_ability = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = latin_support_path_3
+		requires = {
+			afro_arabian_fort_path_1_2
+		}
+	}
+	afro_arabian_fort_path_1_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			mercenary_land_maintenance_cost = -0.15
+			mercenary_naval_maintenance_cost = -0.15
+			army_maintenance_cost = 0.01
+		}
+		icon = levantine_greco_path_7
+		requires = {
+			afro_arabian_fort_path_1_3
+		}
+	}
+	afro_arabian_fort_path_1_5 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			enslavement_efficiency = 0.075
+			global_supply_limit_modifier = 0.1
+		}
+		icon = levantine_arabian_path_3
+		requires = {
+			afro_arabian_fort_path_1_4
+		}
+	}
+	afro_arabian_navy_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			if = {
+				limit = {
+					any_owned_province = {
+						num_of_port_building > 0
+					}
+				}
+				random_owned_province = {
+					limit = {
+						num_of_port_building > 0
+					}
+					owner = {
+						create_unit = {
+							navy = yes
+							location = prev.prev
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+						}
+					}
+				}
+			}
+			else = {
+				ordered_owned_province = {
+					limit = {
+						is_coastal = yes
+						can_build_building = port_building
+					}
+					add_building_level = port_building
+				}
+				random_owned_province = {
+					limit = {
+						num_of_port_building > 0
+					}
+					owner = {
+						create_unit = {
+							navy = yes
+							location = prev.prev
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+							add_subunit = liburnian
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			navy_maintenance_cost = -0.1
+			global_ship_recruit_speed = -0.2
+			naval_range = 0.15
+			navy_maintenance_cost = 0.01
+		}
+		icon = north_african_naval_path_7
+		requires = {
+		}
+	}
+	afro_arabian_navy_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			if = {
+				limit = {
+					any_owned_province = {
+						num_of_port_building > 0
+					}
+				}
+				random_owned_province = {
+					limit = {
+						num_of_port_building > 0
+					}
+					owner = {
+						create_unit = {
+							navy = yes
+							location = prev.prev
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+						}
+					}
+				}
+			}
+			else = {
+				ordered_owned_province = {
+					limit = {
+						is_coastal = yes
+						can_build_building = port_building
+					}
+					add_building_level = port_building
+				}
+				random_owned_province = {
+					limit = {
+						num_of_port_building > 0
+					}
+					owner = {
+						create_unit = {
+							navy = yes
+							location = prev.prev
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+							add_subunit = trireme
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			naval_damage_done = 0.1
+			naval_range = 0.15
+			navy_maintenance_cost = 0.01
+		}
+		icon = north_african_naval_path_7
+		requires = {
+		}
+	}
+	afro_arabian_navy_path_raid = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		enable_ability = naval_raiding
+		modifier = {
+			trireme_offensive = 0.05
+			enslavement_efficiency = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		icon = north_african_naval_path_7
+		requires = {
+			afro_arabian_navy_path_1_1
+			afro_arabian_navy_path_2_1
+		}
+	}
+	afro_arabian_navy_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = tetrere
+						add_subunit = tetrere
+						add_subunit = tetrere
+						add_subunit = tetrere
+						add_subunit = tetrere
+						add_subunit = tetrere
+					}
+				}
+			}
+		}
+		modifier = {
+			tetrere_offensive = 0.1
+			tetrere_defensive = 0.1
+			coastal_terrain_combat_bonus = 0.1
+		}
+		icon = north_african_naval_path_7
+		requires = {
+			afro_arabian_navy_path_raid
+		}
+	}
+	afro_arabian_navy_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		allow_unit_type = octere
+		modifier = {
+			naval_damage_taken = -0.1
+			navy_maintenance_cost = 0.01
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = octere
+						add_subunit = octere
+						add_subunit = octere
+						add_subunit = octere
+					}
+				}
+			}
+		}
+		icon = north_african_naval_path_7
+		requires = {
+			afro_arabian_navy_path_1_2
+		}
+	}
+}

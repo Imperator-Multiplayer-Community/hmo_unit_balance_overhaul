@@ -1,5 +1,5 @@
-﻿afro_arabian_philosophy_2 = {
-	#Ethiopian Path
+arabian_philosophy_2 = {
+	#Arabian Path
 	color = {
 		1.72
 		0.64
@@ -10,23 +10,21 @@
 		trigger_if = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = afro_arabian_influence
+				has_variable = arabian_influence
 			}
 			custom_tooltip = {
-				text = "tradition_unlock_requirement_afro_arabian"
+				text = "tradition_unlock_requirement_arabian"
 				any_country_culture = {
 					is_integrated = yes
 					country_culture_pop_count >= percent_size_culture_group_comparison
 					OR = {
-						this.culture.culture_group = culture_group:meroitic_group
-						this.culture.culture_group = culture_group:aksumite_group
-						this.culture.culture_group = culture_group:nilotic_group
+						this.culture.culture_group = culture_group:south_levantine
 					}
 				}
 			}
 		}
 	}
-	afro_arabian_integrated_path_1 = {
+	arabian_integrated_path_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -41,7 +39,7 @@
 		requires = {
 		}
 	}
-	afro_arabian_integrated_path_1_2 = {
+	arabian_integrated_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t4
 		}
@@ -51,23 +49,23 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					culture = aksumite
+					culture = hadhrami
 					add_trait = aggressive
 				}
 			}
 		}
 		modifier = {
 			light_infantry_discipline = 0.025
-			warelephant_discipline = 0.025
+			archers_discipline = 0.025
 			camels_discipline = 0.025
 			army_maintenance_cost = 0.02
 		}
 		icon = levantine_arabian_path_end_bonus
 		requires = {
-			afro_arabian_integrated_path_1
+			arabian_integrated_path_1
 		}
 	}
-	afro_arabian_integrated_path_2_1 = {
+	arabian_integrated_path_2_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
