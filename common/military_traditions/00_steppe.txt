@@ -1,7 +1,7 @@
 ﻿steppe_philosophy = { #Scythian Path
 	color = hsv { 1.72 0.64 0.7 }
 	image = persian_scythian_path_4
-	
+
 	allow = {
 		trigger_if = {
 			limit = { country_culture_group = scythia }
@@ -56,7 +56,7 @@
 	on_activate = {
 		set_variable = left_generic_tree
 	}
-	modifier = { 
+	modifier = {
 		light_cavalry_cost = -0.05
 		light_cavalry_movement_speed = 0.05
 		light_infantry_cost = -0.05
@@ -64,7 +64,7 @@
 		horse_archers_cost = -0.05
 		horse_archers_movement_speed = 0.05
 		army_maintenance_cost = 0.01
-	} 
+	}
 	icon = persian_bactrian_path_5
 	requires = { }
 }
@@ -78,21 +78,21 @@ steppe_generic_path_2 = { ###
 	on_activate = {
 		set_variable = right_generic_tree
 	}
-	modifier = { 
+	modifier = {
 		light_cavalry_cost = -0.05
 		light_cavalry_movement_speed = 0.05
-		light_infantry_cost = -0.05
-		light_infantry_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
 		horse_archers_cost = -0.05
 		horse_archers_movement_speed = 0.05
 		army_maintenance_cost = 0.01
-	} 
+	}
 	icon = greek_seleucid_path_2
 	requires = { }
 }
 
 steppe_generic_path_3 = { ###
-	modifier = { 
+	modifier = {
 		light_cavalry_offensive = 0.1
 		light_cavalry_morale = 0.1
 		light_infantry_offensive = 0.1
@@ -100,13 +100,13 @@ steppe_generic_path_3 = { ###
 		horse_archers_offensive = 0.1
 		horse_archers_morale = 0.1
 		army_maintenance_cost = 0.01
-	} 
+	}
 	icon = latin_tribal_path_2
 	requires = {steppe_generic_path_1}
 }
 
-steppe_generic_path_4 = { ### 
-	modifier = { 
+steppe_generic_path_4 = { ###
+	modifier = {
 		light_cavalry_defensive = 0.1
 		light_cavalry_discipline = 0.1
 		light_infantry_defensive = 0.1
@@ -120,45 +120,45 @@ steppe_generic_path_4 = { ###
 }
 
 steppe_generic_path_5 = { ###
-	modifier = { 
-		warelephant_cost = -0.05
-		warelephant_movement_speed = 0.05
-		archers_cost = -0.05
-		archers_movement_speed = 0.05
-		army_maintenance_cost = 0.01
-	} 
-	allow = {military_tech >= 7}
-	icon = levantine_arabian_path_4
-	requires = {steppe_generic_path_3}
-}
-
-steppe_generic_path_6 = { ###
-	modifier = { 
+	modifier = {
 		warelephant_cost = -0.05
 		warelephant_movement_speed = 0.05
 		archers_cost = -0.05
 		archers_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	}
-	allow = {military_tech >= 7} 
+	allow = {military_tech >= 7}
+	icon = levantine_arabian_path_4
+	requires = {steppe_generic_path_3}
+}
+
+steppe_generic_path_6 = { ###
+	modifier = {
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	}
+	allow = {military_tech >= 7}
 	icon = levantine_arabian_path_3
 	requires = {steppe_generic_path_4}
 }
 
 steppe_generic_path_7 = { ###
-	modifier = { 
+	modifier = {
 		warelephant_offensive = 0.1
 		warelephant_morale = 0.1
 		archers_offensive = 0.1
 		archers_morale = 0.1
 		army_maintenance_cost = 0.01
-	} 
+	}
 	icon = mauryan_mauryas_path_5
 	requires = {steppe_generic_path_5}
 }
 
-steppe_generic_path_8 = { ### 
-	modifier = { 
+steppe_generic_path_8 = { ###
+	modifier = {
 		warelephant_defensive = 0.1
 		warelephant_discipline = 0.1
 		archers_defensive = 0.1
@@ -170,7 +170,7 @@ steppe_generic_path_8 = { ###
 }
 
 steppe_generic_path_9 = { ###
-	modifier = { 
+	modifier = {
 		camels_cost = -0.05
 		camels_movement_speed = 0.05
 		heavy_infantry_cost = -0.05
@@ -178,14 +178,14 @@ steppe_generic_path_9 = { ###
 		heavy_cavalry_cost = -0.05
 		heavy_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
-	} 
+	}
 	allow = {military_tech >= 13}
 	icon = mauryan_mauryas_path_1
 	requires = {steppe_generic_path_7 }
 }
 
 steppe_generic_path_10 = { ###
-	modifier = { 
+	modifier = {
 		camels_cost = -0.05
 		camels_movement_speed = 0.05
 		heavy_infantry_cost = -0.05
@@ -193,13 +193,13 @@ steppe_generic_path_10 = { ###
 		heavy_cavalry_cost = -0.05
 		heavy_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
-	} 
+	}
 	icon = mauryan_mauryas_path_3
 	allow = {military_tech >= 13}
 	requires = {steppe_generic_path_8 }
 }
 steppe_generic_path_11 = { ###
-	modifier = { 
+	modifier = {
 		camels_offensive = 0.1
 		camels_morale = 0.1
 		heavy_infantry_offensive = 0.1
@@ -207,13 +207,13 @@ steppe_generic_path_11 = { ###
 		heavy_cavalry_offensive = 0.1
 		heavy_cavalry_morale = 0.1
 		army_maintenance_cost = 0.01
-		global_population_happiness = -0.02	
-	} 
+		global_population_happiness = -0.02
+	}
 	icon = persian_philosophy_start_bonus
 	requires = {steppe_generic_path_9}
 }
-steppe_generic_path_12 = { ### 
-	modifier = { 
+steppe_generic_path_12 = { ###
+	modifier = {
 		camels_defensive = 0.1
 		camels_discipline = 0.1
 		heavy_infantry_defensive = 0.1
@@ -221,15 +221,15 @@ steppe_generic_path_12 = { ###
 		heavy_cavalry_defensive = 0.1
 		heavy_cavalry_morale = 0.1
 		army_maintenance_cost = 0.01
-		global_population_happiness = -0.02	
+		global_population_happiness = -0.02
 	}
 	icon = persian_achaemenid_path_end_bonus
 	requires = {steppe_generic_path_10}
 }
 
 ### NAVAL
-steppe_generic_naval_1 = { 
-	modifier = { 
+steppe_generic_naval_1 = {
+	modifier = {
 		trireme_offensive = 0.15
 		liburnian_offensive = 0.15
 		trireme_movement_speed = 0.1
@@ -246,7 +246,7 @@ steppe_generic_naval_1 = {
 			}
 			random_owned_province = {
 				limit = {
-					num_of_port_building > 0 
+					num_of_port_building > 0
 				}
 				owner = {
 					create_unit = {
@@ -274,7 +274,7 @@ steppe_generic_naval_1 = {
 			}
 			random_owned_province = {
 				limit = {
-					num_of_port_building > 0 
+					num_of_port_building > 0
 				}
 				owner = {
 					create_unit = {
@@ -296,10 +296,10 @@ steppe_generic_naval_1 = {
 }
 
 steppe_generic_naval_2 = { ###
-	modifier = { 
+	modifier = {
 		naval_range = 0.25
 		navy_maintenance_cost = 0.01
-	} 
+	}
 	allow_unit_type = octere
 	icon = mauryan_coastal_path_end_bonus
 	requires = { steppe_generic_naval_1 }
@@ -310,16 +310,16 @@ bactrian_path_12 = { ###
 on_activate = {
 	add_innovation = 3
 }
-modifier = { 
+modifier = {
 	global_population_capacity_modifier = 0.1
 	global_citizen_output = 0.05
-} 
+}
 icon = persian_bactrian_path_2
 requires = {   }
 }
 
 bactrian_path_13 = { ###
-modifier = { 
+modifier = {
 	fort_limit = 1
 	global_food_capacity = 125
 	fort_maintenance_cost = 0.01
@@ -362,50 +362,50 @@ on_activate = {
 		trigger_event = { id = cultural_integration.11 }
 	}
 }
-modifier = { 
+modifier = {
 	price_found_city_cost_modifier = -0.1
-} 
+}
 icon = levantine_egyptian_path_4
 requires = { bactrian_path_13 }
 }
 
 bactrian_path_15 = { ###
-modifier = { 
+modifier = {
 	global_commerce_modifier = 0.1
 	global_monthly_food_modifier = 0.05
 	global_capital_trade_routes = 1
 	global_state_trade_routes = 0.15
-} 
+}
 icon = north_african_army_path_4
 requires = { bactrian_path_14 }
 }
 
 
 bactrian_path_5 = { ###
-modifier = { 
+modifier = {
 	manpower_recovery_speed = 0.05
 	global_freemen_output = 0.05
 	army_maintenance_cost = 0.01
-} 
+}
 icon = persian_achaemenid_path_4
 requires = { bactrian_path_15 }
 }
 
 ### FORTS
 scythian_path_generic_fort_1 = { ###
-modifier = { 
+modifier = {
 	siege_ability = 0.075
-} 
+}
 icon = greek_seleucid_path_5
 requires = {  }
 }
 
 scythian_path_14 = { ###
-modifier = { 
+modifier = {
 	assault_ability = 0.05
 	land_unit_attrition = -0.1
 	army_maintenance_cost = 0.01
-} 
+}
 icon = persian_achaemenid_path_end_bonus
 requires = { scythian_path_generic_fort_1 }
 }
@@ -424,11 +424,11 @@ on_activate = {
 		create_2_freemen_effect = yes
 	}
 }
-modifier = { 
+modifier = {
 	army_movement_speed = 0.075
 	monthly_military_experience_modifier = 0.02
 	army_maintenance_cost = 0.01
-} 
+}
 icon = mauryan_mauryas_path_1
 requires = { scythian_path_generic_fort_1 }
 
@@ -437,21 +437,21 @@ requires = { scythian_path_generic_fort_1 }
 scythian_path_3 = { ###
 on_activate = {
 }
-modifier = { 
+modifier = {
 	army_movement_speed = 0.075
 	max_war_exhaustion = -2.5
-} 
+}
 icon = north_african_tribal_path_3
 requires = { scythian_path_generic_fort_2 }
 
 }
 
 scythian_path_generic_fort_3 = { ###
-		modifier = { 
+		modifier = {
 			global_supply_limit_modifier = 0.15
 			hostile_attrition = 1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_6
 		requires = { scythian_path_3 }
 	}
