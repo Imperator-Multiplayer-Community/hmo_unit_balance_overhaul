@@ -370,6 +370,8 @@
 		}
 		gelonian = {
 		}
+		parthian = {
+		}
 	}
 	barbarian_names = {
 		ACHAEI

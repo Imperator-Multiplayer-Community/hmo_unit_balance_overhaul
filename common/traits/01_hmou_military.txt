@@ -1,0 +1,17 @@
+﻿nomad_warrior = {
+	type = military
+	martial = 1
+	unit = {
+		light_cavalry_discipline = 0.05
+		horse_archers_discipline = 0.05
+	}
+}
+
+tactically_flexible = {
+	type = military
+	martial = 1
+	unit = {
+		heavy_cavalry_discipline = 0.05
+		horse_archers_discipline = 0.05
+	}
+}

@@ -57,9 +57,9 @@
 			}
 		}
 		modifier = {
-			light_infantry_discipline = 0.025
-			warelephant_discipline = 0.025
-			camels_discipline = 0.025
+			light_infantry_discipline = 0.05
+			warelephant_discipline = 0.05
+			camels_discipline = 0.05
 			army_maintenance_cost = 0.02
 		}
 		icon = levantine_arabian_path_end_bonus

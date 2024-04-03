@@ -1,30 +1,31 @@
-arabian_philosophy_2 = {
-	#Arabian Path
+﻿steppe_philosophy_2 = {
+	#Sythian Path
 	color = {
 		1.72
 		0.64
 		0.7
 	}
-	image = levantine_arabian_path_2
+	image = persian_scythian_path_3
 	allow = {
 		trigger_if = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = arabian_influence
+				has_variable = steppe_influence
 			}
 			custom_tooltip = {
-				text = "tradition_unlock_requirement_arabian"
+				text = "tradition_unlock_requirement_steppe"
 				any_country_culture = {
 					is_integrated = yes
 					country_culture_pop_count >= percent_size_culture_group_comparison
 					OR = {
-						this.culture.culture_group = culture_group:south_levantine
+						this.culture.culture_group = culture_group:scythia
+						this.culture.culture_group = culture_group:caucasian
 					}
 				}
 			}
 		}
 	}
-	arabian_integrated_path_1 = {
+	steppe_integrated_path_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -35,11 +36,11 @@ arabian_philosophy_2 = {
 		modifier = {
 			army_maintenance_cost = 0.02
 		}
-		icon = levantine_arabian_path_end_bonus
+		icon = x
 		requires = {
 		}
 	}
-	arabian_integrated_path_1_2 = {
+	steppe_integrated_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t4
 		}
@@ -49,37 +50,20 @@ arabian_philosophy_2 = {
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					culture = hadhrami
+					culture = scythian
 					add_trait = aggressive
 				}
 			}
 		}
 		modifier = {
-			light_infantry_discipline = 0.05
-			archers_discipline = 0.05
-			camels_discipline = 0.05
+			light_cavalry_discipline = 0.05
+			horse_archers_discipline = 0.05
+			heavy_cavalry_discipline = 0.05
 			army_maintenance_cost = 0.02
 		}
-		icon = levantine_arabian_path_end_bonus
+		icon = x
 		requires = {
-			arabian_integrated_path_1
-		}
-	}
-	arabian_integrated_path_2_1 = {
-		allow = {
-			can_pay_price = buy_military_tradition_t2
-		}
-		on_activate = {
-			pay_price = buy_military_tradition_t2
-		}
-		enable_ability = naval_raiding
-		modifier = {
-			trireme_offensive = 0.05
-			enslavement_efficiency = 0.1
-			navy_maintenance_cost = 0.02
-		}
-		icon = levantine_egyptian_path_2
-		requires = {
+			steppe_integrated_path_1
 		}
 	}
 }

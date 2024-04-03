@@ -1,1 +1,68 @@
-﻿
+﻿parthian_philosophy_2 = {
+	#Parthian Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
+	image = persian_scythian_path_3
+	allow = {
+		trigger_if = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = parthian_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_parthian"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:scythian_east
+					}
+				}
+			}
+		}
+	}
+	parthian_integrated_path_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+			# TODO: unlock formation
+		}
+		modifier = {
+			army_maintenance_cost = 0.02
+		}
+		icon = x
+		requires = {
+		}
+	}
+	parthian_integrated_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t4
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t4
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					culture = parthian
+					add_trait = tactically_flexible
+				}
+			}
+		}
+		modifier = {
+			light_infantry_discipline = 0.05
+			horse_archers_discipline = 0.05
+			heavy_cavalry_discipline = 0.05
+			army_maintenance_cost = 0.02
+		}
+		icon = x
+		requires = {
+			parthian_integrated_path_1
+		}
+	}
+}

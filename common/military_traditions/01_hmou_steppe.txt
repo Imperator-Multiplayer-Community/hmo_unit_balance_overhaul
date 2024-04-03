@@ -1,5 +1,5 @@
-﻿parthian_philosophy = {
-	#Parthian Path
+﻿steppe_philosophy = {
+	#Scythian Path
 	color = {
 		1.72
 		0.64
@@ -9,20 +9,30 @@
 	allow = {
 		trigger_if = {
 			limit = {
-				country_culture_group = scythian_east
+				country_culture_group = scythia
 			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
-			country_culture_group = scythian_east
+			country_culture_group = scythia
+		}
+		trigger_else_if = {
+			limit = {
+				country_culture_group = caucasian
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = caucasian
 		}
 		trigger_else = {
 			OR = {
-				culture_group = culture_group:scythian_east
+				culture_group = culture_group:scythia
+				culture_group = culture_group:caucasian
 			}
 		}
 	}
-	parthian_unit_path_1_1 = {
+	steppe_unit_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -38,7 +48,7 @@
 		requires = {
 		}
 	}
-	parthian_unit_path_1_2 = {
+	steppe_unit_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -52,10 +62,10 @@
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			parthian_unit_path_4
+			steppe_unit_path_4
 		}
 	}
-	parthian_unit_path_1_3 = {
+	steppe_unit_path_1_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -69,10 +79,10 @@
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			parthian_unit_path_1_2
+			steppe_unit_path_1_2
 		}
 	}
-	parthian_unit_path_2_1 = {
+	steppe_unit_path_2_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -86,7 +96,7 @@
 		}
 		icon = mauryan_mauryas_path_5
 	}
-	parthian_unit_path_2_2 = {
+	steppe_unit_path_2_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -100,10 +110,10 @@
 		}
 		icon = celtic_germanic_path_7
 		requires = {
-			parthian_unit_path_4
+			steppe_unit_path_4
 		}
 	}
-	parthian_unit_path_2_3 = {
+	steppe_unit_path_2_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -117,10 +127,10 @@
 		}
 		icon = greek_antigonid_path_6
 		requires = {
-			parthian_unit_path_2_2
+			steppe_unit_path_2_2
 		}
 	}
-	parthian_unit_path_3_1 = {
+	steppe_unit_path_3_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -129,12 +139,12 @@
 		}
 		icon = x
 		modifier = {
-			light_infantry_cost = -0.05
-			light_infantry_movement_speed = 0.05
+			light_cavalry_cost = -0.05
+			light_cavalry_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		}
 	}
-	parthian_unit_path_3_2 = {
+	steppe_unit_path_3_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -143,15 +153,15 @@
 		}
 		icon = x
 		modifier = {
-			light_infantry_defensive = 0.1
-			light_infantry_discipline = 0.1
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			parthian_unit_path_4
+			steppe_unit_path_4
 		}
 	}
-	parthian_unit_path_3_3 = {
+	steppe_unit_path_3_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -160,15 +170,15 @@
 		}
 		icon = x
 		modifier = {
-			light_infantry_offensive = 0.1
-			light_infantry_morale = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_morale = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			parthian_unit_path_3_2
+			steppe_unit_path_3_2
 		}
 	}
-	parthian_unit_path_4 = {
+	steppe_unit_path_4 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -178,7 +188,7 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = tactically_flexible
+					add_trait = nomad_warrior
 				}
 			}
 			# TODO: Add Formation
@@ -188,13 +198,13 @@
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			parthian_unit_path_1_1
-			parthian_unit_path_2_1
-			parthian_unit_path_3_1
+			steppe_unit_path_1_1
+			steppe_unit_path_2_1
+			steppe_unit_path_3_1
 		}
 	}
 	### NAVAL
-	parthian_generic_naval_1 = {
+	steppe_generic_naval_1 = {
 		modifier = {
 			trireme_offensive = 0.15
 			liburnian_offensive = 0.15
@@ -263,7 +273,7 @@
 			}
 		}
 	}
-	parthian_generic_naval_2 = {
+	steppe_generic_naval_2 = {
 		###
 		modifier = {
 			naval_range = 0.25
@@ -272,11 +282,11 @@
 		allow_unit_type = octere
 		icon = mauryan_coastal_path_end_bonus
 		requires = {
-			parthian_generic_naval_1
+			steppe_generic_naval_1
 		}
 	}
 	### CIVILIZATION
-	parthian_infra_path_1_1 = {
+	steppe_infra_path_1_1 = {
 		###
 		on_activate = {
 			add_innovation = 3
@@ -289,7 +299,7 @@
 		requires = {
 		}
 	}
-	parthian_infra_path_1_2 = {
+	steppe_infra_path_1_2 = {
 		###
 		modifier = {
 			fort_limit = 1
@@ -301,10 +311,10 @@
 		}
 		icon = north_african_naval_path_6
 		requires = {
-			parthian_infra_path_1_1
+			steppe_infra_path_1_1
 		}
 	}
-	parthian_infra_path_1_3 = {
+	steppe_infra_path_1_3 = {
 		###
 		enable_ability = military_colonies
 		on_activate = {
@@ -347,10 +357,10 @@
 		}
 		icon = levantine_egyptian_path_4
 		requires = {
-			parthian_infra_path_1_2
+			steppe_infra_path_1_2
 		}
 	}
-	parthian_infra_path_1_4 = {
+	steppe_infra_path_1_4 = {
 		###
 		modifier = {
 			global_commerce_modifier = 0.1
@@ -360,10 +370,10 @@
 		}
 		icon = north_african_army_path_4
 		requires = {
-			parthian_infra_path_1_3
+			steppe_infra_path_1_3
 		}
 	}
-	parthian_infra_path_1_5 = {
+	steppe_infra_path_1_5 = {
 		###
 		modifier = {
 			manpower_recovery_speed = 0.05
@@ -372,11 +382,11 @@
 		}
 		icon = persian_achaemenid_path_4
 		requires = {
-			parthian_infra_path_1_4
+			steppe_infra_path_1_4
 		}
 	}
 	### FORTS
-	parthian_path_generic_fort_1 = {
+	scythian_path_generic_fort_1 = {
 		###
 		modifier = {
 			siege_ability = 0.075
@@ -385,7 +395,7 @@
 		requires = {
 		}
 	}
-	parthian_path_14 = {
+	scythian_path_14 = {
 		###
 		modifier = {
 			assault_ability = 0.05
@@ -394,10 +404,10 @@
 		}
 		icon = persian_achaemenid_path_end_bonus
 		requires = {
-			parthian_path_generic_fort_1
+			scythian_path_generic_fort_1
 		}
 	}
-	parthian_path_generic_fort_2 = {
+	scythian_path_generic_fort_2 = {
 		###
 		on_activate = {
 			ordered_owned_province = {
@@ -418,10 +428,10 @@
 		}
 		icon = mauryan_mauryas_path_1
 		requires = {
-			parthian_path_generic_fort_1
+			scythian_path_generic_fort_1
 		}
 	}
-	parthian_path_3 = {
+	scythian_path_3 = {
 		###
 		on_activate = {
 		}
@@ -431,10 +441,10 @@
 		}
 		icon = north_african_tribal_path_3
 		requires = {
-			parthian_path_generic_fort_2
+			scythian_path_generic_fort_2
 		}
 	}
-	parthian_path_generic_fort_3 = {
+	scythian_path_generic_fort_3 = {
 		###
 		modifier = {
 			global_supply_limit_modifier = 0.15
@@ -443,7 +453,7 @@
 		}
 		icon = persian_scythian_path_6
 		requires = {
-			parthian_path_3
+			scythian_path_3
 		}
 	}
 }
