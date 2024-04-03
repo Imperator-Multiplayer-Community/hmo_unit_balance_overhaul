@@ -44,7 +44,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_1_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -60,7 +60,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_1_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t2
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
@@ -77,7 +77,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_1_3 = {
 		allow = {
-			can_pay = buy_military_tradition_t3
+			can_pay_price = buy_military_tradition_t3
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t3
@@ -94,7 +94,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_2_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -108,7 +108,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_2_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t2
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
@@ -125,7 +125,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_2_3 = {
 		allow = {
-			can_pay = buy_military_tradition_t3
+			can_pay_price = buy_military_tradition_t3
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t3
@@ -142,7 +142,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_3_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -156,7 +156,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_3_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t2
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
@@ -173,7 +173,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_3_3 = {
 		allow = {
-			can_pay = buy_military_tradition_t3
+			can_pay_price = buy_military_tradition_t3
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t3
@@ -190,12 +190,10 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_unit_path_4 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
-		}
-		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -205,6 +203,9 @@ afro_arabian_philosophy = {
 			}
 			# TODO: Add Afro-Arabian Formation
 		}
+		modifier = {
+			army_maintenance_cost = 0.01
+		}
 		requires = {
 			afro_arabian_unit_path_1_1
 			afro_arabian_unit_path_2_1
@@ -213,7 +214,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_infa_path_1_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -231,7 +232,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_infa_path_1_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -246,7 +247,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_infa_path_2_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -288,7 +289,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_infa_path_2_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -307,7 +308,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_infa_path_final = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -324,7 +325,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_fort_path_1_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -342,7 +343,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_fort_path_1_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -359,7 +360,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_fort_path_1_3 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -376,7 +377,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_fort_path_1_4 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -393,7 +394,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_fort_path_1_5 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -409,7 +410,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_navy_path_1_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -484,7 +485,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_navy_path_2_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -554,7 +555,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_navy_path_raid = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -573,7 +574,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_navy_path_1_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t2
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
@@ -607,7 +608,7 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_navy_path_1_3 = {
 		allow = {
-			can_pay = buy_military_tradition_t3
+			can_pay_price = buy_military_tradition_t3
 		}
 		allow_unit_type = octere
 		modifier = {

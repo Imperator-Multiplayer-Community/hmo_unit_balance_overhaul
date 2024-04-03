@@ -4,26 +4,10 @@
 #	2nd NOTE: Support units will be added automatically in code when a certain size of Levy is raised, replacing another unit
 #	3rd NOTE: If a specific subunit cannot be constructed for some reason another one that can from that tier will replace it ( if possible )
 #
-levy_egyptian = {
-	#Egyptian
+levy_ethiopian = {
+	#Axumite
 	default = no
-	light_infantry = 0.4
-	heavy_infantry = 0.3
-	camels = 0.3
-}
-
-levy_nubian = {
-	#Nubian
-	default = no
-	archers = 0.4
-	camels = 0.3
-	horse_archers = 0.3
-}
-
-levy_blemmyan = {
-	#Blemmyan
-	default = no
-	archers = 0.4
-	heavy_infantry = 0.3
-	camels = 0.3
+	war_elephants = 0.2
+	light_infantry = 0.6
+	camels = 0.2
 }

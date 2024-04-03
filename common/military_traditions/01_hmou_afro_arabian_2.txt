@@ -28,7 +28,7 @@
 	}
 	afro_arabian_integrated_path_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t2
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
@@ -43,7 +43,7 @@
 	}
 	afro_arabian_integrated_path_1_2 = {
 		allow = {
-			can_pay = buy_military_tradition_t4
+			can_pay_price = buy_military_tradition_t4
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t4
@@ -69,7 +69,7 @@
 	}
 	afro_arabian_integrated_path_2_1 = {
 		allow = {
-			can_pay = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
