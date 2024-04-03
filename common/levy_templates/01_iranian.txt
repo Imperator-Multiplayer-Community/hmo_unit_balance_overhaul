@@ -6,28 +6,7 @@
 #
 levy_iran = {
 	default = no
-	archers = 0.2
-	heavy_cavalry = 0.3
-	light_cavalry = 0.5
-}
-
-levy_cadusian = {
-	default = no
-	archers = 0.4
-	light_infantry = 0.3
-	heavy_cavalry = 0.3
-}
-
-levy_carmanian = {
-	default = no
-	archers = 0.3
-	light_infantry = 0.4
-	horse_archers = 0.3
-}
-
-levy_persian = {
-	default = no
-	archers = 0.7
-	heavy_infantry = 0.15
-	heavy_cavalry = 0.15
+	archers = 0.5
+	light_infantry = 0.2
+	light_cavalry = 0.3
 }
