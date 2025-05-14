@@ -323,42 +323,8 @@ afro_arabian_philosophy = {
 			afro_arabian_infa_path_2_2
 		}
 	}
+	## FORTS
 	afro_arabian_fort_path_1_1 = {
-		allow = {
-			can_pay_price = buy_military_tradition_t1
-		}
-		on_activate = {
-			pay_price = buy_military_tradition_t1
-		}
-		modifier = {
-			global_defensive = 0.075
-			fort_limit = 1
-			garrison_size = 0.1
-			hostile_attrition = 1
-			fort_maintenance_cost = 0.01
-		}
-		icon = north_african_naval_path_6
-		requires = {
-		}
-	}
-	afro_arabian_fort_path_1_2 = {
-		allow = {
-			can_pay_price = buy_military_tradition_t1
-		}
-		on_activate = {
-			pay_price = buy_military_tradition_t1
-		}
-		modifier = {
-			army_weight_modifier = -0.15
-			army_movement_speed = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_tribal_path_end_bonus
-		requires = {
-			afro_arabian_fort_path_1_1
-		}
-	}
-	afro_arabian_fort_path_1_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -372,7 +338,42 @@ afro_arabian_philosophy = {
 		}
 		icon = latin_support_path_3
 		requires = {
+		}
+	}
+	afro_arabian_fort_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			army_weight_modifier = -0.15
+			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = north_african_tribal_path_end_bonus
+		requires = {
+		}
+	}
+	afro_arabian_fort_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		modifier = {
+			global_defensive = 0.075
+			fort_limit = 1
+			garrison_size = 0.1
+			hostile_attrition = 1
+			fort_maintenance_cost = 0.01
+		}
+		icon = north_african_naval_path_6
+		requires = {
 			afro_arabian_fort_path_1_2
+			afro_arabian_fort_path_2_1
 		}
 	}
 	afro_arabian_fort_path_1_4 = {
@@ -408,9 +409,16 @@ afro_arabian_philosophy = {
 			afro_arabian_fort_path_1_4
 		}
 	}
+	## NAVAL
 	afro_arabian_navy_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
+			any_owned_province = {
+				limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+			}
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -420,57 +428,11 @@ afro_arabian_philosophy = {
 						num_of_port_building > 0
 					}
 				}
-				random_owned_province = {
-					limit = {
-						num_of_port_building > 0
-					}
-					owner = {
-						create_unit = {
-							navy = yes
-							location = prev.prev
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-						}
-					}
-				}
+				build_liburnian_effect = yes
 			}
 			else = {
-				ordered_owned_province = {
-					limit = {
-						is_coastal = yes
-						can_build_building = port_building
-					}
-					add_building_level = port_building
-				}
-				random_owned_province = {
-					limit = {
-						num_of_port_building > 0
-					}
-					owner = {
-						create_unit = {
-							navy = yes
-							location = prev.prev
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-							add_subunit = liburnian
-						}
-					}
-				}
+				build_initial_port_effect = yes
+				build_liburnian_effect = yes
 			}
 		}
 		modifier = {
@@ -486,6 +448,12 @@ afro_arabian_philosophy = {
 	afro_arabian_navy_path_2_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
+			any_owned_province = {
+				limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+			}
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -495,57 +463,15 @@ afro_arabian_philosophy = {
 						num_of_port_building > 0
 					}
 				}
-				random_owned_province = {
-					limit = {
-						num_of_port_building > 0
-					}
-					owner = {
-						create_unit = {
-							navy = yes
-							location = prev.prev
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-						}
-					}
-				}
+				build_trireme_effect = yes
 			}
 			else = {
-				ordered_owned_province = {
-					limit = {
-						is_coastal = yes
-						can_build_building = port_building
-					}
-					add_building_level = port_building
-				}
-				random_owned_province = {
-					limit = {
-						num_of_port_building > 0
-					}
-					owner = {
-						create_unit = {
-							navy = yes
-							location = prev.prev
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-							add_subunit = trireme
-						}
-					}
-				}
+				build_initial_port_effect = yes
+				build_trireme_effect = yes
 			}
 		}
 		modifier = {
-			naval_damage_done = 0.1
+			trireme_offensive = 0.05
 			naval_range = 0.15
 			navy_maintenance_cost = 0.01
 		}
@@ -555,14 +481,20 @@ afro_arabian_philosophy = {
 	}
 	afro_arabian_navy_path_raid = {
 		allow = {
-			can_pay_price = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t2
+			any_owned_province = {
+				limit = {
+					is_coastal = yes
+					num_of_port_building > 0
+				}
+			}
 		}
 		on_activate = {
-			pay_price = buy_military_tradition_t1
+			pay_price = buy_military_tradition_t2
 		}
 		enable_ability = naval_raiding
 		modifier = {
-			trireme_offensive = 0.05
+			naval_damage_done = 0.1
 			enslavement_efficiency = 0.1
 			navy_maintenance_cost = 0.01
 		}
@@ -572,29 +504,20 @@ afro_arabian_philosophy = {
 			afro_arabian_navy_path_2_1
 		}
 	}
-	afro_arabian_navy_path_1_2 = {
+	afro_arabian_navy_path_1_3 = {
 		allow = {
-			can_pay_price = buy_military_tradition_t2
-		}
-		on_activate = {
-			pay_price = buy_military_tradition_t2
-			random_owned_province = {
+			can_pay_price = buy_military_tradition_t1
+			any_owned_province = {
 				limit = {
+					is_coastal = yes
 					num_of_port_building > 0
 				}
-				owner = {
-					create_unit = {
-						navy = yes
-						location = prev.prev
-						add_subunit = tetrere
-						add_subunit = tetrere
-						add_subunit = tetrere
-						add_subunit = tetrere
-						add_subunit = tetrere
-						add_subunit = tetrere
-					}
-				}
 			}
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_initial_port_effect = yes
+			build_tetrere_effect = yes
 		}
 		modifier = {
 			tetrere_offensive = 0.1
@@ -606,9 +529,15 @@ afro_arabian_philosophy = {
 			afro_arabian_navy_path_raid
 		}
 	}
-	afro_arabian_navy_path_1_3 = {
+	afro_arabian_navy_path_1_4 = {
 		allow = {
-			can_pay_price = buy_military_tradition_t3
+			can_pay_price = buy_military_tradition_t1
+			any_owned_province = {
+				limit = {
+					is_coastal = yes
+					num_of_port_building > 0
+				}
+			}
 		}
 		allow_unit_type = octere
 		modifier = {
@@ -616,26 +545,13 @@ afro_arabian_philosophy = {
 			navy_maintenance_cost = 0.01
 		}
 		on_activate = {
-			pay_price = buy_military_tradition_t3
-			random_owned_province = {
-				limit = {
-					num_of_port_building > 0
-				}
-				owner = {
-					create_unit = {
-						navy = yes
-						location = prev.prev
-						add_subunit = octere
-						add_subunit = octere
-						add_subunit = octere
-						add_subunit = octere
-					}
-				}
-			}
+			pay_price = buy_military_tradition_t1
+			upgrade_final_port_effect = yes
+			build_octere_effect = yes
 		}
 		icon = north_african_naval_path_7
 		requires = {
-			afro_arabian_navy_path_1_2
+			afro_arabian_navy_path_1_3
 		}
 	}
 }

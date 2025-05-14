@@ -15,3 +15,21 @@ tactically_flexible = {
 		horse_archers_discipline = 0.05
 	}
 }
+
+infantry_tactician = {
+	type = military
+	martial = 1
+	unit = {
+		archers_discipline = 0.05
+		light_infantry_discipline = 0.05
+	}
+}
+
+tactician = {
+	type = military
+	martial = 1
+	unit = {
+		light_infantry_discipline = 0.05
+		light_cavalry_discipline = 0.05
+	}
+}

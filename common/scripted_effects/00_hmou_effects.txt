@@ -1,0 +1,172 @@
+﻿#builds initial port
+build_initial_port_effect = {
+	ordered_owned_province = {
+		limit = {
+			is_coastal = yes
+			can_build_building = port_building
+		}
+		order_by = {
+			value = 0
+			add = num_of_port_building
+			multiply = 10
+			add = total_population
+		}
+		add_building_level = port_building
+	}
+}
+
+#upgrades initial port
+upgrade_initial_port_effect = {
+	ordered_owned_province = {
+		limit = {
+			is_coastal = yes
+			can_build_building = port_building
+			num_of_port_building > 0
+		}
+		order_by = {
+			value = 0
+			add = num_of_port_building
+			multiply = 10
+			add = total_population
+		}
+		while = {
+			limit = {
+				num_of_port_building < 3
+			}
+			add_building_level = port_building
+		}
+	}
+}
+
+#final port upgrade
+upgrade_final_port_effect = {
+	ordered_owned_province = {
+		limit = {
+			is_coastal = yes
+			can_build_building = port_building
+			num_of_port_building > 0
+		}
+		order_by = {
+			value = 0
+			add = num_of_port_building
+			multiply = 10
+			add = total_population
+		}
+		while = {
+			limit = {
+				num_of_port_building < 5
+			}
+			add_building_level = port_building
+		}
+	}
+}
+
+#builds liburnian
+build_liburnian_effect = {
+	ordered_owned_province = {
+		limit = {
+			num_of_port_building > 0
+		}
+		order_by = num_of_port_building
+		owner = {
+			create_unit = {
+				navy = yes
+				location = prev.prev
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+				add_subunit = liburnian
+			}
+		}
+	}
+}
+
+#builds trireme
+build_trireme_effect = {
+	ordered_owned_province = {
+		limit = {
+			num_of_port_building > 0
+		}
+		order_by = num_of_port_building
+		owner = {
+			create_unit = {
+				navy = yes
+				location = prev.prev
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+			}
+		}
+	}
+}
+
+#builds tetrere
+build_tetrere_effect = {
+	ordered_owned_province = {
+		limit = {
+			num_of_port_building > 0
+		}
+		order_by = num_of_port_building
+		owner = {
+			create_unit = {
+				navy = yes
+				location = prev.prev
+				add_subunit = tetrere
+				add_subunit = tetrere
+				add_subunit = tetrere
+				add_subunit = tetrere
+				add_subunit = tetrere
+				add_subunit = tetrere
+			}
+		}
+	}
+}
+
+#builds octere
+build_octere_effect = {
+	ordered_owned_province = {
+		limit = {
+			num_of_port_building > 0
+		}
+		order_by = num_of_port_building
+		owner = {
+			create_unit = {
+				navy = yes
+				location = prev.prev
+				add_subunit = octere
+				add_subunit = octere
+				add_subunit = octere
+				add_subunit = octere
+			}
+		}
+	}
+}
+
+#builds mega_galley
+build_mega_galley_effect = {
+	ordered_owned_province = {
+		limit = {
+			num_of_port_building > 0
+		}
+		order_by = num_of_port_building
+		owner = {
+			create_unit = {
+				navy = yes
+				location = prev.prev
+				add_subunit = mega_galley
+				add_subunit = mega_galley
+			}
+		}
+	}
+}
