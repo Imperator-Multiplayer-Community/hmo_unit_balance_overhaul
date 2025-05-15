@@ -1,30 +1,30 @@
-﻿parthian_philosophy_2 = {
-	#Parthian Path
+﻿persian_philosophy_2 = {
+	#Iranian Traditions
 	color = {
 		1.72
 		0.64
 		0.7
 	}
-	image = persian_scythian_path_3
+	image = persian_scythian_path_5
 	allow = {
-		trigger_if = {
+		trigger_else = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = parthian_influence
+				has_variable = persian_influence
 			}
 			custom_tooltip = {
-				text = "tradition_unlock_requirement_parthian"
+				text = "tradition_unlock_requirement_persian"
 				any_country_culture = {
 					is_integrated = yes
 					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:scythian_east
-					}
+				}
+				OR = {
+					this.culture.culture_group = culture_group:persia
 				}
 			}
 		}
 	}
-	parthian_integrated_path_1 = {
+	persian_integrated_path_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -40,7 +40,7 @@
 		requires = {
 		}
 	}
-	parthian_integrated_path_1_2 = {
+	persian_integrated_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t4
 		}
@@ -50,20 +50,20 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					culture = parthian
-					add_trait = tactically_flexible
+					culture = persia
+					add_trait = combined_tactician
 				}
 			}
 		}
 		modifier = {
 			light_infantry_discipline = 0.05
-			horse_archers_discipline = 0.05
-			heavy_cavalry_discipline = 0.05
+			archers_discipline = 0.05
+			light_cavalry_discipline = 0.05
 			army_maintenance_cost = 0.02
 		}
 		icon = x
 		requires = {
-			parthian_integrated_path_1
+			persian_integrated_path_1
 		}
 	}
 }

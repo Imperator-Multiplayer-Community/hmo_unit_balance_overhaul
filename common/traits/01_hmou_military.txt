@@ -33,3 +33,13 @@ tactician = {
 		light_cavalry_discipline = 0.05
 	}
 }
+
+combined_tactician = {
+	type = military
+	martial = 1
+	unit = {
+		archers_discipline = 0.035
+		light_infantry_discipline = 0.035
+		light_cavalry_discipline = 0.035
+	}
+}
