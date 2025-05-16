@@ -1,26 +1,25 @@
-﻿persian_philosophy = {
-	#Persian Traditions
+﻿greek_philosophy = {
 	color = {
-		1.72
-		0.64
-		0.7
+		0.6
+		0.8
+		0.5
 	}
-	image = persian_achaemenid_path_end_bonus
+	image = greek_philosophy_start_bonus
 	allow = {
 		trigger_if = {
 			limit = {
-				country_culture_group = persia
+				country_culture_group = hellenic
 			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
-			country_culture_group = persia
+			country_culture_group = hellenic
 		}
 		trigger_else = {
-			country_culture_group = persia
+			country_culture_group = hellenic
 		}
 	}
-	persian_unit_path_1_1 = {
+	greek_unit_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -28,15 +27,15 @@
 			pay_price = buy_military_tradition_t1
 		}
 		modifier = {
-			archers_cost = -0.05
-			archers_movement_speed = 0.05
+			heavy_cavalry_cost = -0.05
+			heavy_cavalry_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		}
 		icon = greek_antigonid_path_6
 		requires = {
 		}
 	}
-	persian_unit_path_1_2 = {
+	greek_unit_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -45,15 +44,15 @@
 		}
 		icon = x
 		modifier = {
-			archers_defensive = 0.1
-			archers_discipline = 0.1
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			persian_unit_path_1_1
+			greek_unit_path_1_1
 		}
 	}
-	persian_unit_path_1_3 = {
+	greek_unit_path_1_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -62,15 +61,15 @@
 		}
 		icon = x
 		modifier = {
-			archers_offensive = 0.1
-			archers_morale = 0.1
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_morale = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			persian_unit_path_1_2
+			greek_unit_path_1_2
 		}
 	}
-	persian_unit_path_2_1 = {
+	greek_unit_path_2_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -84,7 +83,7 @@
 		}
 		icon = mauryan_mauryas_path_5
 	}
-	persian_unit_path_2_2 = {
+	greek_unit_path_2_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -98,10 +97,10 @@
 		}
 		icon = celtic_germanic_path_7
 		requires = {
-			persian_unit_path_2_1
+			greek_unit_path_2_1
 		}
 	}
-	persian_unit_path_2_3 = {
+	greek_unit_path_2_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -115,10 +114,10 @@
 		}
 		icon = greek_antigonid_path_6
 		requires = {
-			persian_unit_path_2_2
+			greek_unit_path_2_2
 		}
 	}
-	persian_unit_path_3_1 = {
+	greek_unit_path_3_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -132,7 +131,7 @@
 			army_maintenance_cost = 0.01
 		}
 	}
-	persian_unit_path_3_2 = {
+	greek_unit_path_3_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -146,10 +145,10 @@
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			persian_unit_path_3_1
+			greek_unit_path_3_1
 		}
 	}
-	persian_unit_path_3_3 = {
+	greek_unit_path_3_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -163,10 +162,10 @@
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			persian_unit_path_3_2
+			greek_unit_path_3_2
 		}
 	}
-	persian_unit_path_4 = {
+	greek_unit_path_4 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -176,7 +175,7 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = infantry_tactician
+					add_trait = student_of_alexander
 				}
 			}
 			# TODO: Add Formation
@@ -186,142 +185,144 @@
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			persian_unit_path_1_1
-			persian_unit_path_2_1
-			persian_unit_path_3_1
+			greek_unit_path_1_1
+			greek_unit_path_2_1
+			greek_unit_path_3_1
 		}
 	}
-	### NAVAL
-	persian_naval_path_1_1 = {
-		icon = levantine_egyptian_path_2
+	#naval
+	greek_naval_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-			}
+			can_build_port = yes
 		}
 		modifier = {
-			naval_morale = 0.5
+			coastal_terrain_combat_bonus = 0.1
+			naval_damage_taken = -0.1
 			navy_maintenance_cost = 0.01
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
-			if = {
-				limit = {
-					any_owned_province = {
-						num_of_port_building > 0
-					}
-				}
-				build_liburnian_effect = yes
-			}
-			else = {
-				build_initial_port_effect = yes
-				build_liburnian_effect = yes
-			}
+			build_initial_port_effect = yes
+			build_liburnian_effect = yes
 		}
+		icon = greek_states_path_5
 	}
-	persian_naval_path_1_2 = {
-		icon = north_african_naval_path_end_bonus
+	greek_naval_path_2_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_build_port = yes
+		}
+		icon = greek_seleucid_path_end_bonus
+		modifier = {
+			ship_cost = -0.15
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			build_initial_port_effect = yes
+			build_trireme_effect = yes
+		}
+	}
+	greek_naval_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+			can_build_navy = yes
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
 		}
 		modifier = {
-			ocean_combat_bonus = 0.1
-			naval_range = 0.15
-			navy_maintenance_cost = 0.01
+			enslavement_efficiency = 0.075
+		}
+		enable_ability = naval_raiding
+		requires = {
+			greek_naval_path_1_1
+			greek_naval_path_2_1
+		}
+		icon = greek_antigonid_path_4
+	}
+	greek_naval_path_1_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+			can_build_navy = yes
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
 			upgrade_initial_port_effect = yes
 			build_tetrere_effect = yes
 		}
-		requires = {
-			persian_naval_path_1_1
+		modifier = {
+			ocean_combat_bonus = 0.1
+			coastal_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
 		}
+		requires = {
+			greek_naval_path_1_3
+		}
+		icon = greek_seleucid_path_5
 	}
-	persian_naval_path_1_3 = {
+	greek_naval_path_1_5 = {
 		allow = {
-			can_pay_price = buy_military_tradition_t2
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_pay_price = buy_military_tradition_t1
+			can_build_navy = yes
 		}
 		on_activate = {
-			pay_price = buy_military_tradition_t2
+			pay_price = buy_military_tradition_t1
+			upgrade_initial_port_effect = yes
+			build_octere_effect = yes
+		}
+		modifier = {
+			naval_damage_done = 0.05
+			global_ship_recruit_speed = 0.15
+			navy_maintenance_cost = 0.01
+		}
+		allow_unit_type = octere
+		requires = {
+			greek_naval_path_1_4
+		}
+		icon = greek_antigonid_path_2
+	}
+	greek_naval_path_1_6 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+			can_build_navy = yes
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
 			upgrade_final_port_effect = yes
 			build_mega_galley_effect = yes
 		}
 		modifier = {
-			naval_damage_done = 0.1
-			coastal_terrain_combat_bonus = 0.1
 			naval_range = 0.1
 			navy_maintenance_cost = 0.01
 		}
 		allow_unit_type = mega_galley
-		icon = persian_achaemenid_path_3
 		requires = {
-			persian_naval_path_1_2
+			greek_naval_path_1_5
 		}
+		icon = default_test
 	}
-	### CIVILIZATION
-	persian_infra_path_1_1 = {
+	#civ
+	greek_infra_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-		}
-		on_activate = {
-			pay_price = buy_military_tradition_t1
 		}
 		modifier = {
-			global_export_commerce_modifier = 0.05
-		}
-		icon = mauryan_coastal_path_6
-		requires = {
-		}
-	}
-	persian_infra_path_2_1 = {
-		allow = {
-			can_pay_price = buy_military_tradition_t1
-		}
-		on_activate = {
-			pay_price = buy_military_tradition_t1
-			add_innovation = 3
-		}
-		modifier = {
-			build_time = 0.1
-			build_cost = -0.15
-		}
-		icon = persian_bactrian_path_2
-		requires = {
-		}
-	}
-	persian_infra_path_1_3 = {
-		allow = {
-			can_pay_price = buy_military_tradition_t1
+			price_found_city_cost_modifier = -0.1
 		}
 		enable_ability = military_colonies
+		icon = latin_philosophy_start_bonus
 		on_activate = {
 			pay_price = buy_military_tradition_t1
 			ordered_owned_province = {
 				limit = {
 					NOT = {
-						dominant_province_culture_group = root.culture_group
+						province_dominant_culture_group = hellenic
 					}
 					any_neighbor_province = {
 						count > 1
 						NOT = {
-							dominant_province_culture_group = root.culture_group
+							province_dominant_culture_group = hellenic
 						}
 					}
 					state = {
@@ -347,17 +348,8 @@
 				}
 			}
 		}
-		modifier = {
-			global_monthly_civilization = 0.03
-			country_civilization_value = 5
-		}
-		icon = persian_achaemenid_path_5
-		requires = {
-			persian_infra_path_1_1
-			persian_infra_path_2_1
-		}
 	}
-	persian_infra_path_1_4 = {
+	greek_infra_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -365,15 +357,64 @@
 			pay_price = buy_military_tradition_t1
 		}
 		modifier = {
-			global_building_slot = 1
-			global_tax_modifier = 0.075
+			global_slaves_output = 0.1
+			global_nobles_happyness = 0.05
+		}
+		requires = {
+			greek_infra_path_1_1
+		}
+		icon = greek_states_path_4
+	}
+	greek_infra_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_pop_assimilation_speed = 0.1
+			global_tax_modifier = 0.05
+		}
+		requires = {
+			greek_infra_path_1_2
+		}
+		icon = levantine_greco_path_5
+	}
+	greek_infra_path_2_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			research_points_modifier = 0.1
+			build_cost = -0.1
+		}
+		requires = {
+			greek_infra_path_1_2
+		}
+		icon = greek_bactrian_path_2
+	}
+	greek_infra_path_3_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_export_commerce_modifier = 0.075
+			price_found_metropolis_cost_modifier = -0.15
+		}
+		requires = {
+			greek_infra_path_1_2
 		}
 		icon = levantine_greco_path_7
-		requires = {
-			persian_infra_path_1_3
-		}
 	}
-	persian_infra_path_1_5 = {
+	#fort
+	greek_fort_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
@@ -381,71 +422,79 @@
 			pay_price = buy_military_tradition_t1
 		}
 		modifier = {
-			price_found_metropolis_cost_modifier = -0.15
-			global_nobles_happyness = 0.06
+			global_cohort_start_experience = 5
+			experience_decay = -0.005
+			army_maintenance_cost = 0.01
 		}
-		icon = mauryan_coastal_path_6
-		requires = {
-			persian_infra_path_1_3
-		}
+		icon = greek_states_path_3
 	}
-	### FORTS
-	persian_fort_path_1_1 = {
+	greek_fort_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
-			add_4_free_province_investments = yes
 			pay_price = buy_military_tradition_t1
+			add_innovation = 3
 		}
 		modifier = {
-			global_defensive = 0.075
-			fort_limit = 1
-			garrison_size = 0.1
-			fort_maintenance_cost = 0.01
+			mercenary_land_maintenance_cost = -0.1
+			global_defensive = 0.05
 		}
-		icon = north_african_naval_path_6
 		requires = {
+			greek_fort_path_1_1
 		}
+		icon = greek_states_path_7
 	}
-	persian_fort_path_2_1 = {
+	greek_fort_path_1_3 = {
 		allow = {
-			can_pay_price = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
-			pay_price = buy_military_tradition_t1
+			pay_price = buy_military_tradition_t2
 			capital_scope = {
 				add_building_level = fortress_building
 			}
 		}
 		modifier = {
-			army_maintenance_cost = -0.05
-			war_exhaustion = -0.04
-			experience_decay = -0.005
+			global_defensive = 0.075
+			fort_limit = 1
+			fort_maintenance_cost = 0.01
 		}
-		icon = latin_support_path_3
 		requires = {
+			greek_fort_path_1_2
 		}
+		icon = greek_states_path_6
 	}
-	persian_fort_path_1_3 = {
+	greek_fort_path_1_4 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
+			ordered_owned_province = {
+				limit = {
+					province_dominant_culture_group = hellenic
+				}
+				order_by = {
+					value = 0
+					add = population_cap
+					subtract = total_population
+				}
+				max = 3
+				check_range_bounds = no
+				create_2_freemen_effect = yes
+			}
 		}
 		modifier = {
-			global_manpower_modifier = 0.05
-			max_war_exhaustion = -2.5
-			army_maintenance_cost = 0.01
+			fort_maintenance_cost = 0.01
+			garrison_size = 0.15
 		}
-		icon = persian_scythian_path_7
 		requires = {
-			persian_fort_path_1_1
-			persian_fort_path_2_1
+			greek_fort_path_1_3
 		}
+		icon = latin_support_path_3
 	}
-	persian_fort_path_1_4 = {
+	greek_fort_path_1_5 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t3
 		}
@@ -453,12 +502,12 @@
 			pay_price = buy_military_tradition_t3
 		}
 		modifier = {
+			war_score_cost = -0.1
 			land_morale_modifier = 0.05
-			omen_power = 0.2
 		}
-		icon = latin_tribal_path_3
+		icon = greek_seleucid_path_5
 		requires = {
-			persian_fort_path_1_3
+			greek_fort_path_1_4
 		}
 	}
 }

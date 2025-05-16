@@ -72,7 +72,7 @@ afro_arabian_philosophy = {
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			afro_arabian_unit_path_4
+			afro_arabian_unit_path_1_1
 		}
 	}
 	afro_arabian_unit_path_1_3 = {
@@ -120,7 +120,7 @@ afro_arabian_philosophy = {
 		}
 		icon = celtic_germanic_path_7
 		requires = {
-			afro_arabian_unit_path_4
+			afro_arabian_unit_path_2_1
 		}
 	}
 	afro_arabian_unit_path_2_3 = {
@@ -168,7 +168,7 @@ afro_arabian_philosophy = {
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			afro_arabian_unit_path_4
+			afro_arabian_unit_path_3_1
 		}
 	}
 	afro_arabian_unit_path_3_3 = {

@@ -1,35 +1,34 @@
-﻿steppe_philosophy_2 = {
-	#Sythian Path
+﻿greek_philosophy_2 = {
+	#Greek Kingdom Tree
 	color = {
-		1.72
-		0.64
-		0.7
+		0.6
+		0.8
+		0.5
 	}
-	image = persian_scythian_path_3
+	image = greek_states_path_end_bonus
 	allow = {
 		custom_tooltip = {
 			text = "tradition_unlock_requirement_cultural_decision"
-			has_variable = steppe_influence
+			has_variable = greek_influence
 		}
 		custom_tooltip = {
-			text = "tradition_unlock_requirement_steppe"
+			text = "tradition_unlock_requirement_greek_ecd"
 			any_country_culture = {
 				is_integrated = yes
 				country_culture_pop_count >= percent_size_culture_group_comparison
-				OR = {
-					this.culture.culture_group = culture_group:scythia
-					this.culture.culture_group = culture_group:caucasian
-				}
+				this.culture.culture_group = culture_group:hellenic
 			}
 		}
 	}
-	steppe_integrated_path_1 = {
+	greek_integrated_path_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
+			enable_ability = military_colonies
 			# TODO: unlock formation
+			# TODO: unlock levy
 		}
 		modifier = {
 			army_maintenance_cost = 0.02
@@ -38,7 +37,7 @@
 		requires = {
 		}
 	}
-	steppe_integrated_path_1_2 = {
+	greek_integrated_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t4
 		}
@@ -48,19 +47,20 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = aggressive
+					culture = macedonian
+					add_trait = student_of_alexander
 				}
 			}
 		}
 		modifier = {
+			light_infantry_discipline = 0.05
 			light_cavalry_discipline = 0.05
-			horse_archers_discipline = 0.05
 			heavy_cavalry_discipline = 0.05
 			army_maintenance_cost = 0.02
 		}
 		icon = x
 		requires = {
-			steppe_integrated_path_1
+			greek_integrated_path_1
 		}
 	}
 }

@@ -43,3 +43,12 @@ combined_tactician = {
 		light_cavalry_discipline = 0.035
 	}
 }
+
+student_of_alexander = {
+	type = military
+	martial = 1
+	unit = {
+		light_infantry_discipline = 0.05
+		heavy_cavalry_discipline = 0.05
+	}
+}

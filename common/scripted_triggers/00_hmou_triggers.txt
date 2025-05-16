@@ -1,0 +1,17 @@
+﻿can_build_port = {
+	any_owned_province = {
+		limit = {
+			is_coastal = yes
+			can_build_building = port_building
+		}
+	}
+}
+
+can_build_navy = {
+	any_owned_province = {
+		limit = {
+			is_coastal = yes
+			num_of_port_building > 0
+		}
+	}
+}

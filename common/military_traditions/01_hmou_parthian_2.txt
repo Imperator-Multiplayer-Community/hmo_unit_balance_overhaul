@@ -7,19 +7,17 @@
 	}
 	image = persian_scythian_path_3
 	allow = {
-		trigger_if = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = parthian_influence
-			}
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_parthian"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:scythian_east
-					}
+		custom_tooltip = {
+			text = "tradition_unlock_requirement_cultural_decision"
+			has_variable = parthian_influence
+		}
+		custom_tooltip = {
+			text = "tradition_unlock_requirement_parthian"
+			any_country_culture = {
+				is_integrated = yes
+				country_culture_pop_count >= percent_size_culture_group_comparison
+				OR = {
+					this.culture.culture_group = culture_group:scythian_east
 				}
 			}
 		}

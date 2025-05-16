@@ -52,7 +52,7 @@ arabian_philosophy = {
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			arabian_unit_path_4
+			arabian_unit_path_1_1
 		}
 	}
 	arabian_unit_path_1_3 = {
@@ -100,7 +100,7 @@ arabian_philosophy = {
 		}
 		icon = celtic_germanic_path_7
 		requires = {
-			arabian_unit_path_4
+			arabian_unit_path_2_1
 		}
 	}
 	arabian_unit_path_2_3 = {
@@ -148,7 +148,7 @@ arabian_philosophy = {
 			army_maintenance_cost = 0.01
 		}
 		requires = {
-			arabian_unit_path_4
+			arabian_unit_path_3_1
 		}
 	}
 	arabian_unit_path_3_3 = {
@@ -372,14 +372,15 @@ arabian_philosophy = {
 	}
 	afro_arabian_fort_path_1_5 = {
 		allow = {
-			can_pay_price = buy_military_tradition_t1
+			can_pay_price = buy_military_tradition_t2
 		}
 		on_activate = {
-			pay_price = buy_military_tradition_t1
+			pay_price = buy_military_tradition_t2
 		}
 		modifier = {
-			enslavement_efficiency = 0.075
-			global_supply_limit_modifier = 0.1
+			enslavement_efficiency = 0.1
+			naval_range = 0.15
+			naval_morale_modifier = 0.025
 		}
 		icon = levantine_arabian_path_3
 		requires = {

@@ -72,16 +72,10 @@ build_liburnian_effect = {
 			create_unit = {
 				navy = yes
 				location = prev.prev
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
-				add_subunit = liburnian
+				while = {
+					count = 10
+					add_subunit = liburnian
+				}
 			}
 		}
 	}
@@ -98,14 +92,10 @@ build_trireme_effect = {
 			create_unit = {
 				navy = yes
 				location = prev.prev
-				add_subunit = trireme
-				add_subunit = trireme
-				add_subunit = trireme
-				add_subunit = trireme
-				add_subunit = trireme
-				add_subunit = trireme
-				add_subunit = trireme
-				add_subunit = trireme
+				while = {
+					count = 8
+					add_subunit = trireme
+				}
 			}
 		}
 	}
@@ -122,12 +112,10 @@ build_tetrere_effect = {
 			create_unit = {
 				navy = yes
 				location = prev.prev
-				add_subunit = tetrere
-				add_subunit = tetrere
-				add_subunit = tetrere
-				add_subunit = tetrere
-				add_subunit = tetrere
-				add_subunit = tetrere
+				while = {
+					count = 6
+					add_subunit = tetrere
+				}
 			}
 		}
 	}
@@ -144,10 +132,10 @@ build_octere_effect = {
 			create_unit = {
 				navy = yes
 				location = prev.prev
-				add_subunit = octere
-				add_subunit = octere
-				add_subunit = octere
-				add_subunit = octere
+				while = {
+					count = 4
+					add_subunit = octere
+				}
 			}
 		}
 	}
@@ -164,8 +152,10 @@ build_mega_galley_effect = {
 			create_unit = {
 				navy = yes
 				location = prev.prev
-				add_subunit = mega_galley
-				add_subunit = mega_galley
+				while = {
+					count = 2
+					add_subunit = mega_galley
+				}
 			}
 		}
 	}
