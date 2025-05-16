@@ -182,7 +182,6 @@
 		}
 		icon = x
 		modifier = {
-			army_maintenance_cost = 0.01
 		}
 		requires = {
 			greek_unit_path_1_1

@@ -52,3 +52,11 @@ student_of_alexander = {
 		heavy_cavalry_discipline = 0.05
 	}
 }
+
+centurion = {
+	type = military
+	martial = 1
+	unit = {
+		heavy_infantry_discipline = 0.075
+	}
+}

@@ -183,7 +183,6 @@
 		}
 		icon = x
 		modifier = {
-			army_maintenance_cost = 0.01
 		}
 		requires = {
 			persian_unit_path_1_1
@@ -196,12 +195,7 @@
 		icon = levantine_egyptian_path_2
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-			}
+			can_build_port = yes
 		}
 		modifier = {
 			naval_morale = 0.5
@@ -227,12 +221,7 @@
 		icon = north_african_naval_path_end_bonus
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_build_port = yes
 		}
 		modifier = {
 			ocean_combat_bonus = 0.1
@@ -251,12 +240,7 @@
 	persian_naval_path_1_3 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_build_navy = yes
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2

@@ -184,7 +184,6 @@ arabian_philosophy = {
 			# TODO: Add Afro-Arabian Formation
 		}
 		modifier = {
-			army_maintenance_cost = 0.01
 		}
 		requires = {
 			arabian_unit_path_1_1
@@ -390,12 +389,7 @@ arabian_philosophy = {
 	afro_arabian_navy_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-			}
+			can_build_port = yes
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -425,12 +419,7 @@ arabian_philosophy = {
 	afro_arabian_navy_path_2_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-			}
+			can_build_port = yes
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1
@@ -459,12 +448,7 @@ arabian_philosophy = {
 	afro_arabian_navy_path_raid = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_build_navy = yes
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t2
@@ -510,12 +494,7 @@ arabian_philosophy = {
 		icon = north_african_naval_path_7
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_build_navy = yes
 		}
 		on_activate = {
 			pay_price = buy_military_tradition_t1

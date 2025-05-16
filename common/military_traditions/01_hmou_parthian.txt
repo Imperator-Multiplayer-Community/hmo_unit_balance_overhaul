@@ -185,7 +185,6 @@
 		}
 		icon = x
 		modifier = {
-			army_maintenance_cost = 0.01
 		}
 		requires = {
 			parthian_unit_path_1_1
@@ -197,12 +196,7 @@
 	parthian_naval_path_1_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t1
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-			}
+			can_build_port = yes
 		}
 		modifier = {
 			trireme_offensive = 0.15
@@ -236,12 +230,7 @@
 	parthian_naval_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
-			any_owned_province = {
-				limit = {
-					is_coastal = yes
-					num_of_port_building > 0
-				}
-			}
+			can_build_navy = yes
 		}
 		allow_unit_type = octere
 		on_activate = {

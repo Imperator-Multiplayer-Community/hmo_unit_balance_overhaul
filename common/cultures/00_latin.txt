@@ -1,22 +1,63 @@
 ﻿latin = {
-	color = hsv { 0 0.91 0.55 }
-	
+	color = {
+		0
+		0.91
+		0.55
+	}
 	levy_template = levy_italic
-	
-	primary = light_infantry
-	second = heavy_infantry
-	flank = light_cavalry
-
+	primary = archers
+	second = light_infantry
+	flank = heavy_cavalry
 	primary_navy = tetrere
 	secondary_navy = hexere
 	flank_navy = liburnian
-	
 	use_latin_name_rules = yes
-	
 	male_names = {
-		Appius Agrippa Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Opiter 
-		Publius Postumus Proculus Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Volero Volumnius Octavius
-		Statius Tullus Volesus Vopiscus Caeso Paullus Hostus Numerius Sertor Potitus Vibius Cossus Arruns Camillus
+		Appius
+		Agrippa
+		Aulus
+		Caelus
+		Decimus
+		Decius
+		Drusus
+		Faustus
+		Gaius
+		Gnaeus
+		Lucius
+		Mamercus
+		Manius
+		Marcus
+		Mettius
+		Opiter
+		Publius
+		Postumus
+		Proculus
+		Quintus
+		Secundus
+		Septimus
+		Servius
+		Sextus
+		Spurius
+		Tertius
+		Titus
+		Tiberius
+		Volero
+		Volumnius
+		Octavius
+		Statius
+		Tullus
+		Volesus
+		Vopiscus
+		Caeso
+		Paullus
+		Hostus
+		Numerius
+		Sertor
+		Potitus
+		Vibius
+		Cossus
+		Arruns
+		Camillus
 	}
 	female_names = {
 		none
@@ -293,31 +334,164 @@
 		NICKNAME_ZOILUS
 		NICKNAME_ZOSIMUS
 	}
-
 	female_order = {
-		Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
+		Prima
+		Secunda
+		Tertia
+		Quarta
+		Quinta
+		Septa
+		Septima
+		Octava
+		Nona
+		Decima
+		Undecima
+		Duodecima
 	}
-
 	culture = {
-		roman = { levy_template = levy_roman }
-		venetic = {}
-		ligurian = {}
+		roman = {
+			levy_template = levy_roman
+			primary = archers
+			second = heavy_infantry
+			flank = light_cavalry
+		}
+		venetic = {
+		}
+		ligurian = {
+		}
 		etruscan = {
 			levy_template = levy_etruscan
 			male_names = {
-				Amtnie Amuni Anche Anthai Aninas Arunth Araz Arzni Arnth Autu Aule Cei Ceile Ceisi
-				Cire Cnaive Clate Cruthni Cuinte Cursni Fapi Felce Felsnas Fulu Hapre Hirumina Husi
-				Carcuna Carthasie Ceisie Cavie Larce Laris Larth Larthuza Laucie Lauche Lethei
-				Licine Lucer Mamurce Marce Murila Numna Pesna Petru Plikasnas Plute Presnte
-				Pumpu Puplie Cupe Ranazu Rasce Ruvfe Ruifre Sanchuna Scarpe Sethre Spitus Spurie Squrie
-				Tarchi Teitur Thefri Thucer Ticusna Tite Tlesna Tursikina Tusnute Uchsie Uchulni Usele
-				Vel Velchaie Velthur Venel Vetus Vipie
+				Amtnie
+				Amuni
+				Anche
+				Anthai
+				Aninas
+				Arunth
+				Araz
+				Arzni
+				Arnth
+				Autu
+				Aule
+				Cei
+				Ceile
+				Ceisi
+				Cire
+				Cnaive
+				Clate
+				Cruthni
+				Cuinte
+				Cursni
+				Fapi
+				Felce
+				Felsnas
+				Fulu
+				Hapre
+				Hirumina
+				Husi
+				Carcuna
+				Carthasie
+				Ceisie
+				Cavie
+				Larce
+				Laris
+				Larth
+				Larthuza
+				Laucie
+				Lauche
+				Lethei
+				Licine
+				Lucer
+				Mamurce
+				Marce
+				Murila
+				Numna
+				Pesna
+				Petru
+				Plikasnas
+				Plute
+				Presnte
+				Pumpu
+				Puplie
+				Cupe
+				Ranazu
+				Rasce
+				Ruvfe
+				Ruifre
+				Sanchuna
+				Scarpe
+				Sethre
+				Spitus
+				Spurie
+				Squrie
+				Tarchi
+				Teitur
+				Thefri
+				Thucer
+				Ticusna
+				Tite
+				Tlesna
+				Tursikina
+				Tusnute
+				Uchsie
+				Uchulni
+				Usele
+				Vel
+				Velchaie
+				Velthur
+				Venel
+				Vetus
+				Vipie
 			}
 			female_names = {
-				Anina Aprthni Apunei Arunthia Arzna Arntha Ati Aula Ceia Culni Cursi Cusua Fasthi
-				Hasthi Hercnei Kanuta Larthi Lethi Luci Matun Metli Numni Pulia Racu Ramtha Ranthu
-				Ravnthu Satlnei Sela Semni Sethri Squria Squlina Tanchuil Tarcha Teituri Thanchvil
-				Thana Thefrina Thestia Thuceru Ticusnei Titi Veli Velchina Venela Vesi Vipi
+				Anina
+				Aprthni
+				Apunei
+				Arunthia
+				Arzna
+				Arntha
+				Ati
+				Aula
+				Ceia
+				Culni
+				Cursi
+				Cusua
+				Fasthi
+				Hasthi
+				Hercnei
+				Kanuta
+				Larthi
+				Lethi
+				Luci
+				Matun
+				Metli
+				Numni
+				Pulia
+				Racu
+				Ramtha
+				Ranthu
+				Ravnthu
+				Satlnei
+				Sela
+				Semni
+				Sethri
+				Squria
+				Squlina
+				Tanchuil
+				Tarcha
+				Teituri
+				Thanchvil
+				Thana
+				Thefrina
+				Thestia
+				Thuceru
+				Ticusnei
+				Titi
+				Veli
+				Velchina
+				Venela
+				Vesi
+				Vipi
 			}
 			family = {
 				Uclina.Uclinei.Uclinii.Ucli
@@ -618,7 +792,7 @@
 				NICKNAME_VENTESE
 				NICKNAME_VERU
 				NICKNAME_ZALLE
-				NICKNAME_PALPENIA # female from here
+				NICKNAME_PALPENIA				# female from here
 				NICKNAME_PAPANIA
 				NICKNAME_PREZUNIA
 				NICKNAME_PURCENIA
@@ -638,21 +812,139 @@
 		rhaetian = {
 			levy_template = levy_rhaetian
 			male_names = {
-				Amtnie Amuni Anche Anthai Aninas Arunth Araz Arzni Arnth Autu Aule Cei Ceile Ceisi
-				Cire Cnaive Clate Cruthni Cuinte Cursni Fapi Felce Felsnas Fulu Hapre Hirumina Husi
-				Carcuna Carthasie Ceisie Cavie Larce Laris Larth Larthuza Laucie Lauche Lethei
-				Licine Lucer Mamurce Marce Murila Numna Pesna Petru Plikasnas Plute Presnte
-				Pumpu Puplie Cupe Ranazu Rasce Ruvfe Ruifre Sanchuna Scarpe Sethre Spitus Spurie Squrie
-				Tarchi Teitur Thefri Thucer Ticusna Tite Tlesna Tursikina Tusnute Uchsie Uchulni Usele
-				Vel Velchaie Velthur Venel Vetus Vipie
+				Amtnie
+				Amuni
+				Anche
+				Anthai
+				Aninas
+				Arunth
+				Araz
+				Arzni
+				Arnth
+				Autu
+				Aule
+				Cei
+				Ceile
+				Ceisi
+				Cire
+				Cnaive
+				Clate
+				Cruthni
+				Cuinte
+				Cursni
+				Fapi
+				Felce
+				Felsnas
+				Fulu
+				Hapre
+				Hirumina
+				Husi
+				Carcuna
+				Carthasie
+				Ceisie
+				Cavie
+				Larce
+				Laris
+				Larth
+				Larthuza
+				Laucie
+				Lauche
+				Lethei
+				Licine
+				Lucer
+				Mamurce
+				Marce
+				Murila
+				Numna
+				Pesna
+				Petru
+				Plikasnas
+				Plute
+				Presnte
+				Pumpu
+				Puplie
+				Cupe
+				Ranazu
+				Rasce
+				Ruvfe
+				Ruifre
+				Sanchuna
+				Scarpe
+				Sethre
+				Spitus
+				Spurie
+				Squrie
+				Tarchi
+				Teitur
+				Thefri
+				Thucer
+				Ticusna
+				Tite
+				Tlesna
+				Tursikina
+				Tusnute
+				Uchsie
+				Uchulni
+				Usele
+				Vel
+				Velchaie
+				Velthur
+				Venel
+				Vetus
+				Vipie
 			}
 			female_names = {
-				Anina Aprthni Apunei Arunthia Arzna Arntha Ati Aula Ceia Culni Cursi Cusua Fasthi
-				Hasthi Hercnei Kanuta Larthi Lethi Luci Matun Metli Numni Pulia Racu Ramtha Ranthu
-				Ravnthu Satlnei Sela Semni Sethri Squria Squlina Tanchuil Tarcha Teituri Thanchvil
-				Thana Thefrina Thestia Thuceru Ticusnei Titi Veli Velchina Venela Vesi Vipi
+				Anina
+				Aprthni
+				Apunei
+				Arunthia
+				Arzna
+				Arntha
+				Ati
+				Aula
+				Ceia
+				Culni
+				Cursi
+				Cusua
+				Fasthi
+				Hasthi
+				Hercnei
+				Kanuta
+				Larthi
+				Lethi
+				Luci
+				Matun
+				Metli
+				Numni
+				Pulia
+				Racu
+				Ramtha
+				Ranthu
+				Ravnthu
+				Satlnei
+				Sela
+				Semni
+				Sethri
+				Squria
+				Squlina
+				Tanchuil
+				Tarcha
+				Teituri
+				Thanchvil
+				Thana
+				Thefrina
+				Thestia
+				Thuceru
+				Ticusnei
+				Titi
+				Veli
+				Velchina
+				Venela
+				Vesi
+				Vipi
 			}
-			family = { #Here
+			family = {
+				#Here
 				Uclina.Uclinei.Uclinii.Ucli
 				Acnatru.Acnatrui.Acnatrui.Acnatr
 				Acriena.Acrienei.Acriena.Acrinian
@@ -951,7 +1243,7 @@
 				NICKNAME_VENTESE
 				NICKNAME_VERU
 				NICKNAME_ZALLE
-				NICKNAME_PALPENIA #female from here
+				NICKNAME_PALPENIA				#female from here
 				NICKNAME_PAPANIA
 				NICKNAME_PREZUNIA
 				NICKNAME_PURCENIA
@@ -968,19 +1260,35 @@
 				NICKNAME_ZALLENIA
 			}
 		}
-		umbrian = {}
-		samnite = { levy_template = levy_samnite }
-		siculian = {}
-		bruttian = {}
-		lucanian = {}
+		umbrian = {
+		}
+		samnite = {
+			levy_template = levy_samnite
+		}
+		siculian = {
+		}
+		bruttian = {
+		}
+		lucanian = {
+		}
 	}
-	
-	barbarian_names = { BRUTTII CAMUNNI CARACENI CENOMANI EUGANEI FRINIATES LIBURNI LIGURES LEPONTII LUCANI MAMERTINI PATAVINI PENTRI }
-	
+	barbarian_names = {
+		BRUTTII
+		CAMUNNI
+		CARACENI
+		CENOMANI
+		EUGANEI
+		FRINIATES
+		LIBURNI
+		LIGURES
+		LEPONTII
+		LUCANI
+		MAMERTINI
+		PATAVINI
+		PENTRI
+	}
 	graphical_culture = roman_gfx
-
 	ethnicities = {
 		10 = roman
 	}
-
 }
