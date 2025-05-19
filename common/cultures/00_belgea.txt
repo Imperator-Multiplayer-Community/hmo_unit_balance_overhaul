@@ -1,32 +1,166 @@
 ﻿belgae_group = {
-
-	color = hsv { 0.45 0.8 0.45 }
-	
+	color = {
+		0.45
+		0.8
+		0.45
+	}
 	primary = archers
 	second = heavy_infantry
 	flank = light_cavalry
-	
 	primary_navy = tetrere
 	secondary_navy = hexere
 	flank_navy = liburnian
-	
-	levy_template = levy_gallic 
-
+	levy_template = levy_belgae
 	male_names = {
-		Acco Addedomarus Adiatuanus Adminius Aiorix Ambicatos Andecombogius Aneroestes Ariovistus Arverus Arvirargus Atis Avitus 
-		Bellicianus Bellovesus Boduognatus Boio Boiorix Bolgios Brennus Bricussa Britomaris Brucetius Buite Cailtram Caractacus 
-		Carvilius Cassivellaunus Cattulanus Cartorites Catugnatus Cavarinus Cavarus Celatus Cingetorix Coilus Commios Comux Concolitanus Correus Cottius Crixus
-		Cunobelinus Diviciacus Divico Donnus Drappes Dubnovellaunus Dumnacus Ducarius Duratios Dumnocoveros Dumnorix Elitovius Etitovius Epatticus
-		Galan Galba Guiderius Iacus Iccius Immanuentius Inamarcus Inammicus Indutiomarus Kimarcus Lucterius Lugotorix Lutarius Mallaius Mandubracius Marganus Mascelio
-		Orgetorix Prasutagus Segovax Sinatus Sinorix Sisillius Talorc Tasciovanus Tasgetius Taximagulus Teutomalius Tincomarus Togodumnus Vertiscus
-		Venutius Viridorix Vosenius Vodenos
-		
+		Acco
+		Addedomarus
+		Adiatuanus
+		Adminius
+		Aiorix
+		Ambicatos
+		Andecombogius
+		Aneroestes
+		Ariovistus
+		Arverus
+		Arvirargus
+		Atis
+		Avitus
+		Bellicianus
+		Bellovesus
+		Boduognatus
+		Boio
+		Boiorix
+		Bolgios
+		Brennus
+		Bricussa
+		Britomaris
+		Brucetius
+		Buite
+		Cailtram
+		Caractacus
+		Carvilius
+		Cassivellaunus
+		Cattulanus
+		Cartorites
+		Catugnatus
+		Cavarinus
+		Cavarus
+		Celatus
+		Cingetorix
+		Coilus
+		Commios
+		Comux
+		Concolitanus
+		Correus
+		Cottius
+		Crixus
+		Cunobelinus
+		Diviciacus
+		Divico
+		Donnus
+		Drappes
+		Dubnovellaunus
+		Dumnacus
+		Ducarius
+		Duratios
+		Dumnocoveros
+		Dumnorix
+		Elitovius
+		Etitovius
+		Epatticus
+		Galan
+		Galba
+		Guiderius
+		Iacus
+		Iccius
+		Immanuentius
+		Inamarcus
+		Inammicus
+		Indutiomarus
+		Kimarcus
+		Lucterius
+		Lugotorix
+		Lutarius
+		Mallaius
+		Mandubracius
+		Marganus
+		Mascelio
+		Orgetorix
+		Prasutagus
+		Segovax
+		Sinatus
+		Sinorix
+		Sisillius
+		Talorc
+		Tasciovanus
+		Tasgetius
+		Taximagulus
+		Teutomalius
+		Tincomarus
+		Togodumnus
+		Vertiscus
+		Venutius
+		Viridorix
+		Vosenius
+		Vodenos
 	}
 	female_names = {
-		Aife Airmed Ancasta Banna Billica Boudica Bricta Cata Cartimandua Chiomara Damona Diseta Gwendolen Litavis Iamcilla Maeve Verica
-		Cingetessa Conna Catia Carssouna Cunovinna Illica Lovernisca Magunna Lucilia Oconea Ria Rosula Senica Sentica Sulicena
-		Vassura Vinoma Vorvena Urca Veloriga Velibia Totia Titocuna Velbutena Seniciana Senila Vrocata Exuperata Deiana Cunolava Cunsa Aucissa
-		Allauna Alatucca Aessicunia Bodicacia Britivenda Catissena Cantisena 
+		Aife
+		Airmed
+		Ancasta
+		Banna
+		Billica
+		Boudica
+		Bricta
+		Cata
+		Cartimandua
+		Chiomara
+		Damona
+		Diseta
+		Gwendolen
+		Litavis
+		Iamcilla
+		Maeve
+		Verica
+		Cingetessa
+		Conna
+		Catia
+		Carssouna
+		Cunovinna
+		Illica
+		Lovernisca
+		Magunna
+		Lucilia
+		Oconea
+		Ria
+		Rosula
+		Senica
+		Sentica
+		Sulicena
+		Vassura
+		Vinoma
+		Vorvena
+		Urca
+		Veloriga
+		Velibia
+		Totia
+		Titocuna
+		Velbutena
+		Seniciana
+		Senila
+		Vrocata
+		Exuperata
+		Deiana
+		Cunolava
+		Cunsa
+		Aucissa
+		Allauna
+		Alatucca
+		Aessicunia
+		Bodicacia
+		Britivenda
+		Catissena
+		Cantisena
 	}
 	family = {
 		Ambonus.Ambona.Ambonii.Ambonid
@@ -60,19 +194,35 @@
 		Galanus.Galana.Galanii.Galanid
 	}
 	culture = {
-		belgae = { levy_template = levy_northern_gallic }
-		aduatacian = {}
-		eburonian = {}
-		nervian = {}
-		morinian = { levy_template = levy_northern_gallic }
-		veliocassian = { levy_template = levy_northern_gallic }
-		bellovacian = {}
-		
+		belgae = {
+			levy_template = levy_northern_gallic
+		}
+		aduatacian = {
+		}
+		eburonian = {
+		}
+		nervian = {
+		}
+		morinian = {
+			levy_template = levy_northern_gallic
+		}
+		veliocassian = {
+			levy_template = levy_northern_gallic
+		}
+		bellovacian = {
+		}
 	}
-	
-	barbarian_names = { AMBIANI ATREBATES CANANEFATES VIROMANDES AMBIANES CAEROSES PAEMANES SEGNES }
-	
-	graphical_culture = celtic_gfx	
+	barbarian_names = {
+		AMBIANI
+		ATREBATES
+		CANANEFATES
+		VIROMANDES
+		AMBIANES
+		CAEROSES
+		PAEMANES
+		SEGNES
+	}
+	graphical_culture = celtic_gfx
 	ethnicities = {
 		10 = celtic
 	}

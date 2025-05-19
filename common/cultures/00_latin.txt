@@ -351,6 +351,7 @@
 	culture = {
 		roman = {
 			levy_template = levy_roman
+			#TODO: not sure this will work
 			primary = archers
 			second = heavy_infantry
 			flank = light_cavalry
@@ -1263,7 +1264,6 @@
 		umbrian = {
 		}
 		samnite = {
-			levy_template = levy_samnite
 		}
 		siculian = {
 		}

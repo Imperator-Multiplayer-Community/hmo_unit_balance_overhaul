@@ -1,0 +1,71 @@
+﻿celtic_philosophy_2 = {
+	color = {
+		1.1
+		1
+		0.5
+	}
+	image = celtic_germanic_path_1
+	allow = {
+		custom_tooltip = {
+			text = "tradition_unlock_requirement_cultural_decision"
+			has_variable = celtic_influence
+		}
+		custom_tooltip = {
+			text = "tradition_unlock_requirement_celtic"
+			any_country_culture = {
+				is_integrated = yes
+				country_culture_pop_count >= percent_size_culture_group_comparison
+				OR = {
+					this.culture.culture_group = culture_group:gallic
+					this.culture.culture_group = culture_group:celto_pannonian_group
+					this.culture.culture_group = culture_group:belgae_group
+					this.culture.culture_group = culture_group:britannic
+					this.culture.culture_group = culture_group:gaelic
+					this.culture.culture_group = culture_group:proto_european
+				}
+			}
+		}
+	}
+	celtic_integrated_path_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+			# TODO: unlock formation
+			# TODO: unlock levy
+		}
+		modifier = {
+			army_maintenance_cost = 0.02
+		}
+		icon = x
+		requires = {
+		}
+	}
+	celtic_integrated_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t4
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t4
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					culture = volcae
+					add_trait = berserker
+				}
+			}
+		}
+		modifier = {
+			archers_discipline = 0.05
+			heavy_infantry_discipline = 0.05
+			light_cavalry_discipline = 0.05
+			army_maintenance_cost = 0.02
+		}
+		icon = x
+		requires = {
+			celtic_integrated_path_1
+		}
+	}
+}

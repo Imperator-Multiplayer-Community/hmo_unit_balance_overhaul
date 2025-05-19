@@ -1,16 +1,16 @@
 ﻿celto_pannonian_group = {
-	color = hsv { 0.25 0.85 0.25 }
-
-	primary = light_infantry
+	color = {
+		0.25
+		0.85
+		0.25
+	}
+	primary = archers
 	second = heavy_infantry
 	flank = light_cavalry
-
 	primary_navy = tetrere
 	secondary_navy = octere
 	flank_navy = liburnian
-
-	levy_template = levy_gallic_panonian
-
+	levy_template = levy_gallic_pannonian
 	male_names = {
 		#Acco Addedomarus Adiatuanus Adminius Aiorix Ambicatos
 		#Andecombogius Aneroestes Ariovistus Arverus Arvirargus
@@ -29,37 +29,152 @@
 		#Sisillius Talorc Tasciovanus Tasgetius Taximagulus
 		#Teutomalius Tincomarus Togodumnus Vertiscus Venutius
 		#Viridorix Vosenius Vodenos
-
-		Adiatorix Aioiorix Albiorix Aldorix Ambitoutos
-		Ambosynios Arteinos Artiknos Ateporix Aueior Aueiorix
-		Bepolitanos Bitocos Bitoitos Bitognatos Bitorix
-		Blesamios Boisagaros Bokerix Boudorix Brigatos
-		Brogimaros Brogitaros Brogorix Kassignatos Katomaros
-		Katmaros Kauaros Kaouaros Kentoarates Kombaromaros
-		Komboiomaros Kombolomaros Konbatiakos Kanklados
-		Konklatos Konnakorix Deietaros Deiotarianos Deiotaros
-		Dobedon Domneion Domnekleios Domnilaos Donnonataieus
-		Dyrialos Dysagoras Dyteutos Ebourenos Ebourianos
-		Epatorix Eporedorix Eposognatos Gaizatodiastos
-		Gaizatorix Gaulotos Leonnorios Lostoiekos Loutourios
-		Olorix Ortiagon Orgiagon Sentamos Sinatos Sinorix
-		Synorix Skingorios Zmertomaros Zmerton Zmertorix
-		Solouettios Tektomaros Ouastex Brennos Bolgios
-		Akichorios Kerethrios Komontorios Kritasiros
+		Adiatorix
+		Aioiorix
+		Albiorix
+		Aldorix
+		Ambitoutos
+		Ambosynios
+		Arteinos
+		Artiknos
+		Ateporix
+		Aueior
+		Aueiorix
+		Bepolitanos
+		Bitocos
+		Bitoitos
+		Bitognatos
+		Bitorix
+		Blesamios
+		Boisagaros
+		Bokerix
+		Boudorix
+		Brigatos
+		Brogimaros
+		Brogitaros
+		Brogorix
+		Kassignatos
+		Katomaros
+		Katmaros
+		Kauaros
+		Kaouaros
+		Kentoarates
+		Kombaromaros
+		Komboiomaros
+		Kombolomaros
+		Konbatiakos
+		Kanklados
+		Konklatos
+		Konnakorix
+		Deietaros
+		Deiotarianos
+		Deiotaros
+		Dobedon
+		Domneion
+		Domnekleios
+		Domnilaos
+		Donnonataieus
+		Dyrialos
+		Dysagoras
+		Dyteutos
+		Ebourenos
+		Ebourianos
+		Epatorix
+		Eporedorix
+		Eposognatos
+		Gaizatodiastos
+		Gaizatorix
+		Gaulotos
+		Leonnorios
+		Lostoiekos
+		Loutourios
+		Olorix
+		Ortiagon
+		Orgiagon
+		Sentamos
+		Sinatos
+		Sinorix
+		Synorix
+		Skingorios
+		Zmertomaros
+		Zmerton
+		Zmertorix
+		Solouettios
+		Tektomaros
+		Ouastex
+		Brennos
+		Bolgios
+		Akichorios
+		Kerethrios
+		Komontorios
+		Kritasiros
 	}
 	female_names = {
-		Aife Airmed Ancasta Banna Billica Boudica Bricta Cata
-		Cartimandua Chiomara Damona Diseta Gwendolen Litavis
-		Iamcilla Maeve Verica Cingetessa Conna Catia Carssouna
-		Cunovinna Illica Lovernisca Magunna Lucilia Oconea Ria
-		Rosula Senica Sentica Sulicena Vassura Vinoma Vorvena
-		Urca Veloriga Velibia Totia Titocuna Velbutena
-		Seniciana Senila Vrocata Exuperata Deiana Cunolava
-		Cunsa Aucissa Allauna Alatucca Aessicunia Bodicacia
-		Britivenda Catissena Cantisena
-
-		Adobogiona Arde Kamma Kominka Ebourena Epone
-		Meliginna Rossomara Zmertomara
+		Aife
+		Airmed
+		Ancasta
+		Banna
+		Billica
+		Boudica
+		Bricta
+		Cata
+		Cartimandua
+		Chiomara
+		Damona
+		Diseta
+		Gwendolen
+		Litavis
+		Iamcilla
+		Maeve
+		Verica
+		Cingetessa
+		Conna
+		Catia
+		Carssouna
+		Cunovinna
+		Illica
+		Lovernisca
+		Magunna
+		Lucilia
+		Oconea
+		Ria
+		Rosula
+		Senica
+		Sentica
+		Sulicena
+		Vassura
+		Vinoma
+		Vorvena
+		Urca
+		Veloriga
+		Velibia
+		Totia
+		Titocuna
+		Velbutena
+		Seniciana
+		Senila
+		Vrocata
+		Exuperata
+		Deiana
+		Cunolava
+		Cunsa
+		Aucissa
+		Allauna
+		Alatucca
+		Aessicunia
+		Bodicacia
+		Britivenda
+		Catissena
+		Cantisena
+		Adobogiona
+		Arde
+		Kamma
+		Kominka
+		Ebourena
+		Epone
+		Meliginna
+		Rossomara
+		Zmertomara
 	}
 	family = {
 		#Ambonus.Ambona.Ambonii.Ambonid
@@ -91,7 +206,6 @@
 		#Tannus.Tanna.Tanni.Tannid
 		#Iccuius.Iccuia.Iccui.Iccian
 		#Galanus.Galana.Galanii.Galanid
-
 		#tribal
 		Aigosagios.Aigosagia.Aigosagioi.Aigosagid
 		Ambitoutos.Ambitouta.Ambitoutoi.Ambitoutid
@@ -107,13 +221,11 @@
 		Trokmos.Trokma.Trokmoi.Trokmid
 		Trokmenos.Trokmena.Trokmenoi.Trokmenid
 		Troknas.Troknada.Troknades.Troknadid
-
 		#patronymic
 		Akitorigiakos.Akitorigiaka.Akitorigiakoi.Akitorigiac
 		Brenniakos.Brenniaka.Brenniakoi.Brenniac
 		Bolgiakos.Bolgiaka.Bolgiakoi.Bolgiac
 		Leonnoriakos.Leonnoriaka.Leonnoriakoi.Leonnoriac
-
 		#geographic
 		Artikniakonos.Artikniakona.Artikniakonoi.Artikniakonan
 		Aldorigos.Aldoriga.Aldorigoi.Aldorigan
@@ -130,17 +242,19 @@
 		Ouindianos.Ouindiana.Ouindianoi.Ouindian
 	}
 	culture = {
-		#celtic_pannonian = {}
-		#letobician = {}
-		#carnian = {}
-		#noric = { levy_template = levy_norican }
-		#boian = {}
-		#eravisci = {}
-		galatian = {}
+		galatian = {
+		}
 	}
-
-	barbarian_names = { TECTOSAGES TOLISTOBOGES TROCMES AIGOSAGES DAGUTENES INOVANTENES OKONDIANES RIGOSAGES }
-
+	barbarian_names = {
+		TECTOSAGES
+		TOLISTOBOGES
+		TROCMES
+		AIGOSAGES
+		DAGUTENES
+		INOVANTENES
+		OKONDIANES
+		RIGOSAGES
+	}
 	graphical_culture = celtic_gfx
 	ethnicities = {
 		10 = celtic
