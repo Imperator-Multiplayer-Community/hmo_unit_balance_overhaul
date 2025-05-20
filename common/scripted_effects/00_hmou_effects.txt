@@ -11,6 +11,7 @@ build_initial_port_effect = {
 			multiply = 10
 			add = total_population
 		}
+		max = 1
 		add_building_level = port_building
 	}
 }
@@ -29,6 +30,7 @@ upgrade_initial_port_effect = {
 			multiply = 10
 			add = total_population
 		}
+		max = 1
 		while = {
 			limit = {
 				num_of_port_building < 3
@@ -52,6 +54,7 @@ upgrade_final_port_effect = {
 			multiply = 10
 			add = total_population
 		}
+		max = 1
 		while = {
 			limit = {
 				num_of_port_building < 5
@@ -78,6 +81,7 @@ build_liburnian_effect = {
 				}
 			}
 		}
+		max = 1
 	}
 }
 
@@ -88,6 +92,7 @@ build_trireme_effect = {
 			num_of_port_building > 0
 		}
 		order_by = num_of_port_building
+		max = 1
 		owner = {
 			create_unit = {
 				navy = yes
@@ -108,6 +113,7 @@ build_tetrere_effect = {
 			num_of_port_building > 0
 		}
 		order_by = num_of_port_building
+		max = 1
 		owner = {
 			create_unit = {
 				navy = yes
@@ -128,6 +134,7 @@ build_octere_effect = {
 			num_of_port_building > 0
 		}
 		order_by = num_of_port_building
+		max = 1
 		owner = {
 			create_unit = {
 				navy = yes
@@ -148,6 +155,7 @@ build_mega_galley_effect = {
 			num_of_port_building > 0
 		}
 		order_by = num_of_port_building
+		max = 1
 		owner = {
 			create_unit = {
 				navy = yes

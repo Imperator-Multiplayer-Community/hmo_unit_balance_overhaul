@@ -1,0 +1,534 @@
+﻿north_african_philosophy = {
+	color = {
+		0.59
+		0.61
+		0.37
+	}
+	image = north_african_philosophy_start_bonus
+	allow = {
+		trigger_if = {
+			limit = {
+				primary_culture = carthaginian
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			primary_culture = carthaginian
+		}
+		trigger_else_if = {
+			limit = {
+				country_culture_group = numidian
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = numidian
+		}
+		trigger_else_if = {
+			limit = {
+				country_culture_group = fezzani
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = fezzani
+		}
+		trigger_else = {
+			OR = {
+				this.culture.culture_group = culture_group:numidian
+				this.culture.culture_group = culture_group:fezzani
+			}
+		}
+	}
+	north_african_unit_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	north_african_unit_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		icon = x
+		modifier = {
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			north_african_unit_path_1_1
+		}
+	}
+	north_african_unit_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		icon = x
+		modifier = {
+			warelephant_offensive = 0.1
+			warelephant_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			north_african_unit_path_1_2
+		}
+	}
+	north_african_unit_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_5
+	}
+	north_african_unit_path_2_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		modifier = {
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = north_african_germanic_path_7
+		requires = {
+			north_african_unit_path_2_1
+		}
+	}
+	north_african_unit_path_2_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		modifier = {
+			light_infantry_offensive = 0.1
+			light_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+			north_african_unit_path_2_2
+		}
+	}
+	north_african_unit_path_3_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		icon = x
+		modifier = {
+			light_cavalry_cost = -0.05
+			light_cavalry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+	}
+	north_african_unit_path_3_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		icon = x
+		modifier = {
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			north_african_unit_path_3_1
+		}
+	}
+	north_african_unit_path_3_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		icon = x
+		modifier = {
+			light_cavalry_offensive = 0.1
+			light_cavalry_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			north_african_unit_path_3_2
+		}
+	}
+	north_african_unit_path_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = punic_tactician
+				}
+			}
+			# TODO: Add Formation
+		}
+		icon = x
+		modifier = {
+		}
+		requires = {
+			north_african_unit_path_1_1
+			north_african_unit_path_2_1
+			north_african_unit_path_3_1
+		}
+	}
+	### CIVILIZATION
+	north_africa_infra_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			add_innovation = 3
+		}
+		modifier = {
+			mercenary_land_maintenance_cost = -0.15
+			recruit_mercenary_cost_modifier = -0.25
+		}
+		icon = north_african_army_path_end_bonus
+		requires = {
+		}
+	}
+	north_africa_infra_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_food_capacity = 175
+			global_commerce_modifier = 0.1
+			army_weight_modifier = -0.1
+		}
+		icon = north_african_army_path_1
+		requires = {
+			north_africa_infra_path_1_1
+		}
+		on_activate = {
+		}
+	}
+	north_africa_infra_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			ordered_owned_province = {
+				limit = {
+					has_city_status = yes
+				}
+				order_by = {
+					value = 0
+					add = population_cap
+					subtract = total_population
+				}
+				max = 4
+				check_range_bounds = no
+				create_3_slaves_effect = yes
+			}
+		}
+		modifier = {
+			mercenary_land_maintenance_cost = -0.1
+			recruit_mercenary_cost_modifier = -0.25
+		}
+		icon = mauryan_coastal_path_6
+		requires = {
+			north_africa_infra_path_1_2
+		}
+	}
+	north_africa_infra_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+			any_owned_province = {
+				limit = {
+					has_city_status = yes
+					num_academy_building = 3
+					total_population >= 60
+					NOT = {
+						has_province_rank = city_metropolis
+					}
+				}
+			}
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			ordered_owned_province = {
+				limit = {
+					has_city_status = yes
+					num_academy_building = 3
+					total_population >= 60
+					NOT = {
+						has_province_rank = city_metropolis
+					}
+				}
+				order_by = total_population
+				max = 1
+				set_city_status = city_metropolis
+			}
+		}
+		modifier = {
+			price_found_metropolis_cost_modifier = -0.15
+			global_nobles_happyness = 0.06
+		}
+		icon = mauryan_coastal_path_6
+		requires = {
+		}
+	}
+	north_africa_infra_path_2_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			add_innovation = 1
+		}
+		modifier = {
+			build_time = 0.1
+			build_cost = -0.15
+		}
+		icon = persian_bactrian_path_2
+		requires = {
+			north_africa_infra_path_2_1
+		}
+	}
+	north_africa_infra_path_2_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			add_innovation = 1
+		}
+		modifier = {
+			global_commerce_modifier = 0.1
+		}
+		icon = mauryan_coastal_path_6
+		requires = {
+			north_africa_infra_path_2_2
+		}
+	}
+	### FORTS
+	north_africa_fort_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			add_1_free_province_investments = yes
+		}
+		modifier = {
+			global_freemen_output = output_small_svalue
+			siege_ability = 0.1
+		}
+		icon = persian_achaemenid_path_4
+		requires = {
+		}
+	}
+	north_africa_fort_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_freemen_output = 0.05
+			general_loyalty = 8
+		}
+		icon = latin_tribal_path_end_bonus
+		requires = {
+			north_africa_fort_path_1_1
+		}
+	}
+	north_africa_fort_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			land_unit_attrition = -0.15
+			global_defensive = 0.05
+		}
+		icon = north_african_tribal_path_5
+		requires = {
+			north_africa_fort_path_1_2
+		}
+	}
+	north_africa_fort_path_1_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_defensive = 0.075
+			fort_limit = 1
+			fort_maintenance_cost = 0.05
+		}
+		icon = north_african_naval_path_6
+		requires = {
+			north_africa_fort_path_1_3
+		}
+	}
+	#naval
+	north_african_naval_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			build_initial_port_effect = yes
+			build_liburnian_effect = yes
+		}
+		modifier = {
+			naval_morale = 0.5
+			navy_maintenance_cost = 0.01
+			enslavement_efficiency = 0.05
+		}
+		icon = north_african_naval_path_1
+		requires = {
+		}
+	}
+	north_african_naval_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			build_initial_port_effect = yes
+			build_trireme_effect = yes
+		}
+		modifier = {
+			ocean_combat_bonus = 0.1
+			naval_range = 0.15
+			navy_maintenance_cost = 0.01
+		}
+		icon = levantine_philosophy_start_bonus
+		requires = {
+			north_african_naval_path_1_1
+		}
+	}
+	north_african_naval_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_initial_port_effect = yes
+			build_tetrere_effect = yes
+		}
+		modifier = {
+			naval_damage_done = 0.1
+			coastal_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		icon = north_african_army_path_2
+		requires = {
+			north_african_naval_path_1_1
+			north_african_naval_path_2_1
+		}
+	}
+	north_african_naval_path_1_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_initial_port_effect = yes
+			build_octere_effect = yes
+		}
+		modifier = {
+			ship_repair_at_sea = 0.02
+			naval_range = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		allow_unit_type = octere
+		icon = north_african_naval_path_4
+		requires = {
+			north_african_naval_path_1_3
+		}
+	}
+	north_african_naval_path_1_5 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_final_port_effect = yes
+			build_mega_galley_effect = yes
+		}
+		modifier = {
+			trireme_offensive = 0.15
+			liburnian_offensive = 0.15
+			trireme_movement_speed = 0.1
+			liburnian_movement_speed = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		allow_unit_type = mega_galley
+		icon = north_african_naval_path_end_bonus
+		requires = {
+			north_african_naval_path_1_4
+		}
+	}
+	north_african_naval_path_2_5 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_final_port_effect = yes
+		}
+		modifier = {
+			naval_damage_taken = -0.1
+			navy_maintenance_cost = 0.01
+		}
+		icon = north_african_naval_path_3
+		requires = {
+			north_african_naval_path_1_4
+		}
+	}
+}

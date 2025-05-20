@@ -70,3 +70,12 @@ centurion = {
 		heavy_infantry_discipline = 0.075
 	}
 }
+
+punic_tactician = {
+	type = military
+	martial = 1
+	unit = {
+		warelephant_discipline = 0.05
+		light_cavalry_discipline = 0.05
+	}
+}

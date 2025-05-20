@@ -1,25 +1,29 @@
-﻿latin_philosophy_2 = {
+﻿north_african_philosophy_2 = {
 	color = {
-		0
-		0.88
-		0.5
+		0.59
+		0.61
+		0.37
 	}
-	image = latin_roman_path_3
+	image = north_african_tribal_path_7
 	allow = {
 		custom_tooltip = {
 			text = "tradition_unlock_requirement_cultural_decision"
-			has_variable = italic_influence
+			has_variable = north_african_influence
 		}
 		custom_tooltip = {
-			text = "tradition_unlock_requirement_latin"
+			text = "tradition_unlock_requirement_north_african"
 			any_country_culture = {
 				is_integrated = yes
 				country_culture_pop_count >= percent_size_culture_group_comparison
-				this.culture.culture_group = culture_group:latin
+				OR = {
+					this.culture.culture_group = culture_group:numidian
+					this.culture.culture_group = culture_group:fezzani
+					is_culture = carthaginian
+				}
 			}
 		}
 	}
-	latin_integrated_path_1 = {
+	north_african_integrated_path_1 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t2
 		}
@@ -36,7 +40,7 @@
 		requires = {
 		}
 	}
-	latin_integrated_path_1_2 = {
+	north_african_integrated_path_1_2 = {
 		allow = {
 			can_pay_price = buy_military_tradition_t4
 		}
@@ -46,20 +50,20 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					culture = roman
-					add_trait = centurion
+					culture = carthaginian
+					add_trait = punic_tactician
 				}
 			}
 		}
 		modifier = {
-			heavy_infantry_discipline = 0.075
-			light_cavalry_discipline = 0.025
-			archers_discipline = 0.025
+			light_infantry_discipline = 0.05
+			warelephant_discipline = 0.05
+			light_cavalry_discipline = 0.05
 			army_maintenance_cost = 0.02
 		}
 		icon = x
 		requires = {
-			latin_integrated_path_1
+			greek_integrated_path_1
 		}
 	}
 }
