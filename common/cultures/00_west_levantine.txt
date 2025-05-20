@@ -2,8 +2,8 @@
 	color = hsv { 0.75 0.9 0.73 }
 
 	primary = archers
-	second = heavy_infantry
-	flank = light_cavalry
+	second = light_infantry
+	flank = camels
 
 	primary_navy = tetrere
 	secondary_navy = hexere
@@ -138,7 +138,6 @@
 			}
 		}
 		nabatean = {
-			levy_template = levy_nabatean
 			male_names = {
 				Abbad Abbas Abdil Abdilah Abdumanap Abdumanat
 				Abdumuttalab Abd_obodat Abdusamiyya Abdushams Abduzza

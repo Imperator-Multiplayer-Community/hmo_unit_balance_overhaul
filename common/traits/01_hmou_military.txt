@@ -79,3 +79,12 @@ punic_tactician = {
 		light_cavalry_discipline = 0.05
 	}
 }
+
+levantine_tactician = {
+	type = military
+	martial = 1
+	unit = {
+		archers_discipline = 0.05
+		camels_discipline = 0.05
+	}
+}

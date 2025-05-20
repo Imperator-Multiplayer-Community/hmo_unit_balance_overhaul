@@ -1,0 +1,477 @@
+﻿levantine_philosophy = {
+	color = {
+		2.7
+		0.6
+		0.5
+	}
+	image = levantine_arabian_path_6
+	allow = {
+		trigger_if = {
+			limit = {
+				country_culture_group = west_levantine
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = west_levantine
+		}
+		trigger_else = {
+			OR = {
+				primary_culture = hebrew
+				primary_culture = nabatean
+				primary_culture = phoenician
+				country_culture_group = west_levantine
+			}
+		}
+	}
+	levantine_unit_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	levantine_unit_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		icon = x
+		modifier = {
+			archers_defensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			levantine_unit_path_1_1
+		}
+	}
+	levantine_unit_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		icon = x
+		modifier = {
+			archers_offensive = 0.1
+			archers_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			levantine_unit_path_1_2
+		}
+	}
+	levantine_unit_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_5
+	}
+	levantine_unit_path_2_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		modifier = {
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = levantine_germanic_path_7
+		requires = {
+			levantine_unit_path_2_1
+		}
+	}
+	levantine_unit_path_2_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		modifier = {
+			light_infantry_offensive = 0.1
+			light_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+			levantine_unit_path_2_2
+		}
+	}
+	levantine_unit_path_3_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		icon = x
+		modifier = {
+			camels_cost = -0.05
+			camels_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+	}
+	levantine_unit_path_3_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+		}
+		icon = x
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			levantine_unit_path_3_1
+		}
+	}
+	levantine_unit_path_3_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t3
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t3
+		}
+		icon = x
+		modifier = {
+			camels_offensive = 0.1
+			camels_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		requires = {
+			levantine_unit_path_3_2
+		}
+	}
+	levantine_unit_path_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = levantine_tactician
+				}
+			}
+			# TODO: Add Formation
+		}
+		icon = x
+		modifier = {
+		}
+		requires = {
+			levantine_unit_path_1_1
+			levantine_unit_path_2_1
+			levantine_unit_path_3_1
+		}
+	}
+	## NAVAL
+	levantine_naval_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			build_initial_port_effect = yes
+			build_liburnian_effect = yes
+		}
+		modifier = {
+			ship_cost = -0.15
+			global_state_trade_routes = 0.05
+			navy_maintenance_cost = 0.01
+		}
+		icon = levantine_philosophy_start_bonus
+		requires = {
+		}
+	}
+	levantine_naval_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_initial_port_effect = yes
+			build_trireme_effect = yes
+		}
+		modifier = {
+			coastal_terrain_combat_bonus = 0.05
+			naval_damage_taken = -0.1
+			navy_maintenance_cost = 0.01
+		}
+		icon = levantine_arabian_path_5
+		requires = {
+			levantine_naval_path_1_1
+		}
+	}
+	levantine_naval_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			build_octere_effect = yes
+		}
+		modifier = {
+			naval_damage_done = 0.15
+			navy_maintenance_cost = -0.1
+		}
+		allow_unit_type = octere
+		icon = levantine_greco_path_6
+		requires = {
+			levantine_naval_path_1_2
+		}
+	}
+	levantine_naval_path_1_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			upgrade_final_port_effect = yes
+			build_mega_galley_effect = yes
+		}
+		modifier = {
+			ocean_combat_bonus = 0.05
+			global_ship_recruit_speed = 0.15
+			navy_maintenance_cost = 0.01
+		}
+		allow_unit_type = mega_galley
+		icon = levantine_egyptian_path_2
+		requires = {
+			levantine_naval_path_1_3
+		}
+	}
+	levantine_naval_path_1_5 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			build_mega_galley_effect = yes
+		}
+		modifier = {
+			octere_cost = -0.15
+			mega_galley_cost = -0.15
+			ocean_combat_bonus = 0.1
+			riverine_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		icon = levantine_egyptian_path_5
+		requires = {
+			levantine_naval_path_1_4
+		}
+	}
+	### FORT
+	levantine_fort_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			ordered_owned_province = {
+				#Upgrades a port, or creates one
+				limit = {
+					can_build_building = fortress_building
+				}
+				order_by = total_population
+				add_building_level = fortress_building
+			}
+		}
+		modifier = {
+			global_defensive = 0.075
+			fort_limit = 1
+		}
+		icon = levantine_egyptian_path_3
+		requires = {
+		}
+	}
+	levantine_fort_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			add_2_free_province_investments = yes
+		}
+		modifier = {
+			fort_limit = 1
+			fort_maintenance_cost = -0.1
+		}
+		icon = levantine_greco_path_end_bonus
+		requires = {
+		}
+	}
+	levantine_fort_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			hostile_attrition = 1
+			garrison_size = 0.1
+		}
+		icon = levantine_arabian_path_6
+		requires = {
+			levantine_fort_path_1_1
+			levantine_fort_path_2_1
+		}
+	}
+	levantine_fort_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_supply_limit_modifier = 0.1
+		}
+		icon = latin_support_path_5
+		requires = {
+			levantine_fort_path_1_2
+		}
+	}
+	### INFRA
+	levantine_infra_path_1_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_population_capacity_modifier = 0.1
+		}
+		icon = levantine_greco_path_7
+		requires = {
+		}
+	}
+	levantine_infra_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_monthly_food_modifier = 0.15
+			global_citizen_happyness = 0.06
+		}
+		icon = levantine_arabian_path_3
+		requires = {
+			levantine_infra_path_1_1
+		}
+	}
+	levantine_infra_path_2_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+			add_2_free_province_investments = yes
+		}
+		modifier = {
+			price_found_city_cost_modifier = -0.075
+		}
+		icon = greek_states_path_4
+		requires = {
+		}
+	}
+	levantine_infra_path_2_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_building_slot = 1
+			enact_holy_site_cost_modifier = -0.25
+		}
+		icon = levantine_arabian_path_6
+		requires = {
+			levantine_infra_path_2_1
+		}
+	}
+	levantine_infra_path_1_3 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_slaves_output = output_large_svalue
+			required_slaves = 0.1
+		}
+		icon = levantine_arabian_path_2
+		requires = {
+			levantine_infra_path_1_2
+			levantine_infra_path_2_2
+		}
+	}
+	levantine_infra_path_1_4 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			global_export_commerce_modifier = 0.075
+			global_goods_from_slaves = -1
+		}
+		icon = levantine_arabian_path_1
+		requires = {
+			levantine_infra_path_1_3
+		}
+	}
+	levantine_infra_path_1_5 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t1
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t1
+		}
+		modifier = {
+			omen_power = 0.2
+			deify_ruler_cost_modifier = -0.15
+			global_food_capacity = 200
+		}
+		icon = latin_tribal_path_3
+		requires = {
+			levantine_infra_path_1_4
+		}
+	}
+}

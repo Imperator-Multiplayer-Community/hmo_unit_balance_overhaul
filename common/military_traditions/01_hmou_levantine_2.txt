@@ -1,0 +1,66 @@
+﻿levantine_philosophy_2 = {
+	color = {
+		2.7
+		0.6
+		0.5
+	}
+	image = levantine_philosophy_start_bonus
+	allow = {
+		custom_tooltip = {
+			text = "tradition_unlock_requirement_cultural_decision"
+			has_variable = levantine_influence
+		}
+		custom_tooltip = {
+			text = "tradition_unlock_requirement_levantine"
+			any_country_culture = {
+				is_integrated = yes
+				country_culture_pop_count >= percent_size_culture_group_comparison
+				OR = {
+					this.culture.culture_group = culture_group:west_levantine
+				}
+			}
+		}
+	}
+	levantine_integrated_path_1 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t2
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t2
+			# TODO: unlock formation
+			# TODO: unlock levy
+		}
+		modifier = {
+			army_maintenance_cost = 0.02
+		}
+		icon = x
+		requires = {
+		}
+	}
+	levantine_integrated_path_1_2 = {
+		allow = {
+			can_pay_price = buy_military_tradition_t4
+		}
+		on_activate = {
+			pay_price = buy_military_tradition_t4
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					culture = hebrew
+					add_trait = levantine_tactician
+				}
+			}
+		}
+		modifier = {
+			archers_discipline = 0.05
+			light_infantry_discipline = 0.05
+			camels_discipline = 0.05
+			army_maintenance_cost = 0.02
+		}
+		icon = x
+		requires = {
+			levantine_integrated_path_1
+		}
+	}
+}
